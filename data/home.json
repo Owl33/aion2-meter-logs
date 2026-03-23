@@ -1,0 +1,283 @@
+{
+  "stats": {
+    "totalReports": 12847,
+    "totalReportsToday": 142,
+    "totalCharacters": 8293,
+    "totalDungeons": 5,
+    "totalBosses": 15,
+    "topDps": 458200,
+    "topDpsDungeon": "드라타마의 둥지"
+  },
+  "dungeonRankings": [
+    {
+      "id": "choeol-4",
+      "name": "초월 4단",
+      "bosses": [
+        {
+          "index": 1,
+          "name": "가라앉은 에몬",
+          "top10": [
+            { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 285708, "reportId": "kPx2Qm9r" },
+            { "rank": 2, "characterName": "루시엘", "jobName": "정령사", "dps": 274200, "reportId": "mRt9Lw2x" },
+            { "rank": 3, "characterName": "카엘타스", "jobName": "사수", "dps": 261500, "reportId": "zQn1Ax4p" },
+            { "rank": 4, "characterName": "세라핀", "jobName": "성직자", "dps": 248300, "reportId": "pHy7Bv3k" },
+            { "rank": 5, "characterName": "다일로스", "jobName": "마법사", "dps": 239100, "reportId": "cFd4Km8q" },
+            { "rank": 6, "characterName": "레이나흐트", "jobName": "격투가", "dps": 228400, "reportId": "wBn6Jx1v" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 219700, "reportId": "tKm3Rp5h" },
+            { "rank": 8, "characterName": "미라엘", "jobName": "정령사", "dps": 208500, "reportId": "yLw9Qz7d" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 198200, "reportId": "hNe5Cx2s" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 185600, "reportId": "fBt8Mv4n" }
+          ]
+        },
+        {
+          "index": 2,
+          "name": "붉은 눈의 카르테",
+          "top10": [
+            { "rank": 1, "characterName": "루시엘", "jobName": "정령사", "dps": 318400, "reportId": "aQr2Tx6u" },
+            { "rank": 2, "characterName": "아이네하르트", "jobName": "검사", "dps": 304100, "reportId": "kPx2Qm9r" },
+            { "rank": 3, "characterName": "다일로스", "jobName": "마법사", "dps": 289700, "reportId": "sEm7Gk3j" },
+            { "rank": 4, "characterName": "레이나흐트", "jobName": "격투가", "dps": 275300, "reportId": "vDn9Wp8c" },
+            { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 261800, "reportId": "bFr4Yq2m" },
+            { "rank": 6, "characterName": "미라엘", "jobName": "정령사", "dps": 248400, "reportId": "cGs5Zr3n" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 234900, "reportId": "dHt6As4o" },
+            { "rank": 8, "characterName": "세라핀", "jobName": "성직자", "dps": 221500, "reportId": "eIu7Bt5p" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 208000, "reportId": "fJv8Cu6q" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 194600, "reportId": "gKw9Dv7r" }
+          ]
+        },
+        {
+          "index": 3,
+          "name": "심연의 군주 바라투스",
+          "top10": [
+            { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 341200, "reportId": "nGk6Lv3r" },
+            { "rank": 2, "characterName": "루시엘", "jobName": "정령사", "dps": 325600, "reportId": "oJm8Nx5q" },
+            { "rank": 3, "characterName": "다일로스", "jobName": "마법사", "dps": 308900, "reportId": "pKn2Oy4w" },
+            { "rank": 4, "characterName": "미라엘", "jobName": "정령사", "dps": 291400, "reportId": "qLp3Pz6e" },
+            { "rank": 5, "characterName": "세라핀", "jobName": "성직자", "dps": 276800, "reportId": "rMq4Qa7t" },
+            { "rank": 6, "characterName": "레이나흐트", "jobName": "격투가", "dps": 261200, "reportId": "sNr5Rb8u" },
+            { "rank": 7, "characterName": "카엘타스", "jobName": "사수", "dps": 248900, "reportId": "tOs6Sc9v" },
+            { "rank": 8, "characterName": "아스트라엘", "jobName": "검사", "dps": 235600, "reportId": "uPt7Td0w" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 221400, "reportId": "vQu8Ue1x" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 208700, "reportId": "wRv9Vf2y" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seongyeok-1",
+      "name": "성역 1",
+      "bosses": [
+        {
+          "index": 1,
+          "name": "성역의 파수꾼",
+          "top10": [
+            { "rank": 1, "characterName": "레이나흐트", "jobName": "격투가", "dps": 298500, "reportId": "xTu5Rw9a" },
+            { "rank": 2, "characterName": "아스트라엘", "jobName": "검사", "dps": 281200, "reportId": "yUv6Sx0b" },
+            { "rank": 3, "characterName": "테르반", "jobName": "사수", "dps": 265800, "reportId": "zVw7Ty1c" },
+            { "rank": 4, "characterName": "카이로스", "jobName": "마법사", "dps": 249100, "reportId": "aWx8Uz2d" },
+            { "rank": 5, "characterName": "아이네하르트", "jobName": "검사", "dps": 234600, "reportId": "bXy9Va3e" },
+            { "rank": 6, "characterName": "루시엘", "jobName": "정령사", "dps": 220100, "reportId": "cYz0Wb4f" },
+            { "rank": 7, "characterName": "다일로스", "jobName": "마법사", "dps": 205600, "reportId": "dZa1Xc5g" },
+            { "rank": 8, "characterName": "세라핀", "jobName": "성직자", "dps": 191100, "reportId": "eAb2Yd6h" },
+            { "rank": 9, "characterName": "카엘타스", "jobName": "사수", "dps": 176600, "reportId": "fBc3Ze7i" },
+            { "rank": 10, "characterName": "미라엘", "jobName": "정령사", "dps": 162100, "reportId": "gCd4Af8j" }
+          ]
+        },
+        {
+          "index": 2,
+          "name": "타락한 빛의 사도",
+          "top10": [
+            { "rank": 1, "characterName": "루시엘", "jobName": "정령사", "dps": 332100, "reportId": "cYz0Wb4f" },
+            { "rank": 2, "characterName": "다일로스", "jobName": "마법사", "dps": 314800, "reportId": "dZa1Xc5g" },
+            { "rank": 3, "characterName": "레이나흐트", "jobName": "격투가", "dps": 298200, "reportId": "eAb2Yd6h" },
+            { "rank": 4, "characterName": "아이네하르트", "jobName": "검사", "dps": 281600, "reportId": "fBc3Ze7i" },
+            { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 265000, "reportId": "gCd4Af8j" },
+            { "rank": 6, "characterName": "미라엘", "jobName": "정령사", "dps": 248400, "reportId": "hDe5Bg9k" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 231800, "reportId": "iEf6Ch0l" },
+            { "rank": 8, "characterName": "세라핀", "jobName": "성직자", "dps": 215200, "reportId": "jFg7Di1m" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 198600, "reportId": "kGh8Ej2n" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 182000, "reportId": "lHi9Fk3o" }
+          ]
+        },
+        {
+          "index": 3,
+          "name": "성역의 지배자 아엘리아",
+          "top10": [
+            { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 358900, "reportId": "fBc3Ze7i" },
+            { "rank": 2, "characterName": "루시엘", "jobName": "정령사", "dps": 341200, "reportId": "gCd4Af8j" },
+            { "rank": 3, "characterName": "다일로스", "jobName": "마법사", "dps": 322500, "reportId": "hDe5Bg9k" },
+            { "rank": 4, "characterName": "레이나흐트", "jobName": "격투가", "dps": 305800, "reportId": "iEf6Ch0l" },
+            { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 289100, "reportId": "jFg7Di1m" },
+            { "rank": 6, "characterName": "미라엘", "jobName": "정령사", "dps": 272400, "reportId": "kGh8Ej2n" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 255700, "reportId": "lHi9Fk3o" },
+            { "rank": 8, "characterName": "세라핀", "jobName": "성직자", "dps": 239000, "reportId": "mIj0Gl4p" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 222300, "reportId": "nJk1Hm5q" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 205600, "reportId": "oKl2In6r" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seongyeok-2",
+      "name": "성역 2",
+      "bosses": [
+        {
+          "index": 1,
+          "name": "어둠의 전령 세이론",
+          "top10": [
+            { "rank": 1, "characterName": "다일로스", "jobName": "마법사", "dps": 312400, "reportId": "iEf6Ch0l" },
+            { "rank": 2, "characterName": "미라엘", "jobName": "정령사", "dps": 295600, "reportId": "jFg7Di1m" },
+            { "rank": 3, "characterName": "세라핀", "jobName": "성직자", "dps": 278900, "reportId": "kGh8Ej2n" },
+            { "rank": 4, "characterName": "루시엘", "jobName": "정령사", "dps": 262200, "reportId": "lHi9Fk3o" },
+            { "rank": 5, "characterName": "아이네하르트", "jobName": "검사", "dps": 245500, "reportId": "mIj0Gl4p" },
+            { "rank": 6, "characterName": "레이나흐트", "jobName": "격투가", "dps": 228800, "reportId": "nJk1Hm5q" },
+            { "rank": 7, "characterName": "카엘타스", "jobName": "사수", "dps": 212100, "reportId": "oKl2In6r" },
+            { "rank": 8, "characterName": "아스트라엘", "jobName": "검사", "dps": 195400, "reportId": "pLm3Jo7s" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 178700, "reportId": "qMn4Kp8t" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 162000, "reportId": "rNo5Lq9u" }
+          ]
+        },
+        {
+          "index": 2,
+          "name": "혼돈의 화신 말라크",
+          "top10": [
+            { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 365200, "reportId": "lHi9Fk3o" },
+            { "rank": 2, "characterName": "레이나흐트", "jobName": "격투가", "dps": 346800, "reportId": "mIj0Gl4p" },
+            { "rank": 3, "characterName": "루시엘", "jobName": "정령사", "dps": 328400, "reportId": "nJk1Hm5q" },
+            { "rank": 4, "characterName": "다일로스", "jobName": "마법사", "dps": 310000, "reportId": "oKl2In6r" },
+            { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 291600, "reportId": "pLm3Jo7s" },
+            { "rank": 6, "characterName": "미라엘", "jobName": "정령사", "dps": 273200, "reportId": "qMn4Kp8t" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 254800, "reportId": "rNo5Lq9u" },
+            { "rank": 8, "characterName": "세라핀", "jobName": "성직자", "dps": 236400, "reportId": "sOp6Mr0v" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 218000, "reportId": "tPq7Ns1w" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 199600, "reportId": "uQr8Ot2x" }
+          ]
+        },
+        {
+          "index": 3,
+          "name": "성역의 파괴자 이그레인",
+          "top10": [
+            { "rank": 1, "characterName": "루시엘", "jobName": "정령사", "dps": 389600, "reportId": "nJk1Hm5q" },
+            { "rank": 2, "characterName": "아이네하르트", "jobName": "검사", "dps": 371400, "reportId": "oKl2In6r" },
+            { "rank": 3, "characterName": "다일로스", "jobName": "마법사", "dps": 352800, "reportId": "pLm3Jo7s" },
+            { "rank": 4, "characterName": "레이나흐트", "jobName": "격투가", "dps": 334200, "reportId": "qMn4Kp8t" },
+            { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 315600, "reportId": "rNo5Lq9u" },
+            { "rank": 6, "characterName": "미라엘", "jobName": "정령사", "dps": 297000, "reportId": "sOp6Mr0v" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 278400, "reportId": "tPq7Ns1w" },
+            { "rank": 8, "characterName": "테르반", "jobName": "사수", "dps": 259800, "reportId": "uQr8Ot2x" },
+            { "rank": 9, "characterName": "세라핀", "jobName": "성직자", "dps": 241200, "reportId": "vRs9Pu3y" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 222600, "reportId": "wSt0Qv4z" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "muui-yoram",
+      "name": "무의 요람",
+      "bosses": [
+        {
+          "index": 1,
+          "name": "허공의 감시자",
+          "top10": [
+            { "rank": 1, "characterName": "카엘타스", "jobName": "사수", "dps": 324100, "reportId": "pLm3Jo7s" },
+            { "rank": 2, "characterName": "아스트라엘", "jobName": "검사", "dps": 306700, "reportId": "qMn4Kp8t" },
+            { "rank": 3, "characterName": "카이로스", "jobName": "마법사", "dps": 289300, "reportId": "rNo5Lq9u" },
+            { "rank": 4, "characterName": "루시엘", "jobName": "정령사", "dps": 271900, "reportId": "sOp6Mr0v" },
+            { "rank": 5, "characterName": "아이네하르트", "jobName": "검사", "dps": 254500, "reportId": "tPq7Ns1w" },
+            { "rank": 6, "characterName": "다일로스", "jobName": "마법사", "dps": 237100, "reportId": "uQr8Ot2x" },
+            { "rank": 7, "characterName": "레이나흐트", "jobName": "격투가", "dps": 219700, "reportId": "vRs9Pu3y" },
+            { "rank": 8, "characterName": "미라엘", "jobName": "정령사", "dps": 202300, "reportId": "wSt0Qv4z" },
+            { "rank": 9, "characterName": "세라핀", "jobName": "성직자", "dps": 184900, "reportId": "xTu1Rw5a" },
+            { "rank": 10, "characterName": "테르반", "jobName": "사수", "dps": 167500, "reportId": "yUv2Sx6b" }
+          ]
+        },
+        {
+          "index": 2,
+          "name": "요람의 수호자 네라스",
+          "top10": [
+            { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 378400, "reportId": "sOp6Mr0v" },
+            { "rank": 2, "characterName": "루시엘", "jobName": "정령사", "dps": 358100, "reportId": "tPq7Ns1w" },
+            { "rank": 3, "characterName": "레이나흐트", "jobName": "격투가", "dps": 337800, "reportId": "uQr8Ot2x" },
+            { "rank": 4, "characterName": "다일로스", "jobName": "마법사", "dps": 317500, "reportId": "vRs9Pu3y" },
+            { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 297200, "reportId": "wSt0Qv4z" },
+            { "rank": 6, "characterName": "미라엘", "jobName": "정령사", "dps": 276900, "reportId": "xTu1Rw5a" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 256600, "reportId": "yUv2Sx6b" },
+            { "rank": 8, "characterName": "세라핀", "jobName": "성직자", "dps": 236300, "reportId": "zVw3Ty7c" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 216000, "reportId": "aWx4Uz8d" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 195700, "reportId": "bXy5Va9e" }
+          ]
+        },
+        {
+          "index": 3,
+          "name": "무의 화신 칼리아스",
+          "top10": [
+            { "rank": 1, "characterName": "다일로스", "jobName": "마법사", "dps": 401200, "reportId": "uQr8Ot2x" },
+            { "rank": 2, "characterName": "아이네하르트", "jobName": "검사", "dps": 384600, "reportId": "vRs9Pu3y" },
+            { "rank": 3, "characterName": "루시엘", "jobName": "정령사", "dps": 368000, "reportId": "wSt0Qv4z" },
+            { "rank": 4, "characterName": "레이나흐트", "jobName": "격투가", "dps": 351400, "reportId": "xTu1Rw5a" },
+            { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 334800, "reportId": "yUv2Sx6b" },
+            { "rank": 6, "characterName": "미라엘", "jobName": "정령사", "dps": 318200, "reportId": "zVw3Ty7c" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 301600, "reportId": "aWx4Uz8d" },
+            { "rank": 8, "characterName": "세라핀", "jobName": "성직자", "dps": 285000, "reportId": "bXy5Va9e" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 268400, "reportId": "cYz6Wb0f" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 251800, "reportId": "dZa7Xc1g" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dratamar",
+      "name": "드라타마의 둥지",
+      "bosses": [
+        {
+          "index": 1,
+          "name": "둥지의 파수꾼 그라울",
+          "top10": [
+            { "rank": 1, "characterName": "루시엘", "jobName": "정령사", "dps": 412800, "reportId": "wSt0Qv4z" },
+            { "rank": 2, "characterName": "아이네하르트", "jobName": "검사", "dps": 392100, "reportId": "xTu1Rw5a" },
+            { "rank": 3, "characterName": "레이나흐트", "jobName": "격투가", "dps": 371500, "reportId": "yUv2Sx6b" },
+            { "rank": 4, "characterName": "다일로스", "jobName": "마법사", "dps": 350900, "reportId": "zVw3Ty7c" },
+            { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 330300, "reportId": "aWx4Uz8d" },
+            { "rank": 6, "characterName": "미라엘", "jobName": "정령사", "dps": 309700, "reportId": "bXy5Va9e" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 289100, "reportId": "cYz6Wb0f" },
+            { "rank": 8, "characterName": "세라핀", "jobName": "성직자", "dps": 268500, "reportId": "dZa7Xc1g" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 247900, "reportId": "eAb2Yd6h" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 227300, "reportId": "fBc3Ze7i" }
+          ]
+        },
+        {
+          "index": 2,
+          "name": "불꽃의 지배자 이그니스",
+          "top10": [
+            { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 428400, "reportId": "zVw3Ty7c" },
+            { "rank": 2, "characterName": "다일로스", "jobName": "마법사", "dps": 406900, "reportId": "aWx4Uz8d" },
+            { "rank": 3, "characterName": "루시엘", "jobName": "정령사", "dps": 385400, "reportId": "bXy5Va9e" },
+            { "rank": 4, "characterName": "레이나흐트", "jobName": "격투가", "dps": 363900, "reportId": "cYz6Wb0f" },
+            { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 342400, "reportId": "dZa7Xc1g" },
+            { "rank": 6, "characterName": "미라엘", "jobName": "정령사", "dps": 320900, "reportId": "eAb2Yd6h" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 299400, "reportId": "fBc3Ze7i" },
+            { "rank": 8, "characterName": "세라핀", "jobName": "성직자", "dps": 277900, "reportId": "gCd4Af8j" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 256400, "reportId": "hDe5Bg9k" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 234900, "reportId": "iEf6Ch0l" }
+          ]
+        },
+        {
+          "index": 3,
+          "name": "드라타마",
+          "top10": [
+            { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 458200, "reportId": "bXy5Va9e" },
+            { "rank": 2, "characterName": "루시엘", "jobName": "정령사", "dps": 431600, "reportId": "cYz6Wb0f" },
+            { "rank": 3, "characterName": "레이나흐트", "jobName": "격투가", "dps": 408300, "reportId": "dZa7Xc1g" },
+            { "rank": 4, "characterName": "다일로스", "jobName": "마법사", "dps": 385000, "reportId": "eAb2Yd6h" },
+            { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 361700, "reportId": "fBc3Ze7i" },
+            { "rank": 6, "characterName": "미라엘", "jobName": "정령사", "dps": 338400, "reportId": "gCd4Af8j" },
+            { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 315100, "reportId": "hDe5Bg9k" },
+            { "rank": 8, "characterName": "세라핀", "jobName": "성직자", "dps": 291800, "reportId": "iEf6Ch0l" },
+            { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 268500, "reportId": "jFg7Di1m" },
+            { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 245200, "reportId": "kGh8Ej2n" }
+          ]
+        }
+      ]
+    }
+  ]
+}
