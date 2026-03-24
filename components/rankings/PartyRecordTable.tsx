@@ -108,13 +108,13 @@ export default function PartyRecordTable({ records }: PartyRecordTableProps) {
 
               {/* 멤버 이름 + 개인 DPS */}
               <TableCell>
-                <div className="flex flex-col gap-0.5">
+                <div className="flex  gap-1">
                   {record.members.map((member, i) => (
                     <div key={i} className="flex items-center justify-between gap-3 text-xs">
                       <span className="font-medium">{member.name}</span>
-                      <span className="tabular-nums text-muted-foreground">
+                      {/* <span className="tabular-nums text-muted-foreground">
                         {fmtDps(member.dps)}
-                      </span>
+                      </span> */}
                     </div>
                   ))}
                 </div>
