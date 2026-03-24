@@ -16,7 +16,7 @@ interface Notice {
   body: string;
 }
 
-interface NewsData {
+export interface NewsData {
   notices: Notice[];
 }
 

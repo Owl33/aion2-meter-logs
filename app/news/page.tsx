@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import newsData from "@/data/news.json";
-import NewsPage from "@/components/news/NewsPage";
+import NewsPage, { NewsData } from "@/components/news/NewsPage";
 
 export const metadata: Metadata = {
   title: "공지 및 업데이트",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <NewsPage data={newsData} />;
+  return <NewsPage data={newsData as NewsData} />;
 }
