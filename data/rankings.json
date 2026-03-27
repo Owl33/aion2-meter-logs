@@ -60,43 +60,318 @@
   "partyRecords": {
     "choeol-4": {
       "1": [
-        { "rank": 1, "clearTime": 112.4, "reportId": "kPx2Qm9r", "date": "2026-03-22", "members": [{"name":"아이네하르트","jobName":"검사","dps":285708},{"name":"루시엘","jobName":"정령사","dps":224009},{"name":"카엘타스","jobName":"사수","dps":98998},{"name":"세라핀","jobName":"성직자","dps":85850}] },
-        { "rank": 2, "clearTime": 118.7, "reportId": "mRt9Lw2x", "date": "2026-03-21", "members": [{"name":"레이나흐트","jobName":"격투가","dps":271200},{"name":"미라엘","jobName":"정령사","dps":218400},{"name":"테르반","jobName":"사수","dps":96200},{"name":"카이로스","jobName":"마법사","dps":82100}] },
-        { "rank": 3, "clearTime": 124.2, "reportId": "zQn1Ax4p", "date": "2026-03-21", "members": [{"name":"아스트라엘","jobName":"검사","dps":261500},{"name":"다일로스","jobName":"마법사","dps":209800},{"name":"카엘타스","jobName":"사수","dps":94100},{"name":"세라핀","jobName":"성직자","dps":79800}] },
-        { "rank": 4, "clearTime": 129.8, "reportId": "pHy7Bv3k", "date": "2026-03-20", "members": [{"name":"아이네하르트","jobName":"검사","dps":254300},{"name":"루시엘","jobName":"정령사","dps":204600},{"name":"미라엘","jobName":"정령사","dps":91400},{"name":"테르반","jobName":"사수","dps":77200}] },
-        { "rank": 5, "clearTime": 134.5, "reportId": "cFd4Km8q", "date": "2026-03-20", "members": [{"name":"다일로스","jobName":"마법사","dps":248100},{"name":"레이나흐트","jobName":"격투가","dps":199400},{"name":"아스트라엘","jobName":"검사","dps":88700},{"name":"카이로스","jobName":"마법사","dps":74600}] },
-        { "rank": 6, "clearTime": 139.1, "reportId": "wBn6Jx1v", "date": "2026-03-19", "members": [{"name":"아이네하르트","jobName":"검사","dps":241900},{"name":"미라엘","jobName":"정령사","dps":194200},{"name":"카엘타스","jobName":"사수","dps":86000},{"name":"세라핀","jobName":"성직자","dps":72000}] },
-        { "rank": 7, "clearTime": 143.8, "reportId": "tKm3Rp5h", "date": "2026-03-19", "members": [{"name":"루시엘","jobName":"정령사","dps":235700},{"name":"레이나흐트","jobName":"격투가","dps":189000},{"name":"테르반","jobName":"사수","dps":83300},{"name":"카이로스","jobName":"마법사","dps":69400}] },
-        { "rank": 8, "clearTime": 148.4, "reportId": "yLw9Qz7d", "date": "2026-03-18", "members": [{"name":"아스트라엘","jobName":"검사","dps":229500},{"name":"다일로스","jobName":"마법사","dps":183800},{"name":"미라엘","jobName":"정령사","dps":80600},{"name":"세라핀","jobName":"성직자","dps":66800}] },
-        { "rank": 9, "clearTime": 153.0, "reportId": "hNe5Cx2s", "date": "2026-03-18", "members": [{"name":"아이네하르트","jobName":"검사","dps":223300},{"name":"루시엘","jobName":"정령사","dps":178600},{"name":"카엘타스","jobName":"사수","dps":77900},{"name":"테르반","jobName":"사수","dps":64200}] },
-        { "rank": 10, "clearTime": 157.6, "reportId": "fBt8Mv4n", "date": "2026-03-17", "members": [{"name":"레이나흐트","jobName":"격투가","dps":217100},{"name":"아스트라엘","jobName":"검사","dps":173400},{"name":"다일로스","jobName":"마법사","dps":75200},{"name":"카이로스","jobName":"마법사","dps":61600}] }
+        {
+          "rank": 1,
+          "clearTime": 112.4,
+          "reportId": "kPx2Qm9r",
+          "date": "2026-03-22",
+          "members": [
+            { "name": "아이네하르트", "jobName": "검성", "dps": 285708 },
+            { "name": "루시엘", "jobName": "정령성", "dps": 224009 },
+            { "name": "카엘타스", "jobName": "궁성", "dps": 98998 },
+            { "name": "세라핀", "jobName": "치유성", "dps": 85850 }
+          ]
+        },
+        {
+          "rank": 2,
+          "clearTime": 118.7,
+          "reportId": "mRt9Lw2x",
+          "date": "2026-03-21",
+          "members": [
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 271200 },
+            { "name": "미라엘", "jobName": "정령성", "dps": 218400 },
+            { "name": "테르반", "jobName": "궁성", "dps": 96200 },
+            { "name": "카이로스", "jobName": "마도성", "dps": 82100 }
+          ]
+        },
+        {
+          "rank": 3,
+          "clearTime": 124.2,
+          "reportId": "zQn1Ax4p",
+          "date": "2026-03-21",
+          "members": [
+            { "name": "아스트라엘", "jobName": "검성", "dps": 261500 },
+            { "name": "다일로스", "jobName": "마도성", "dps": 209800 },
+            { "name": "카엘타스", "jobName": "궁성", "dps": 94100 },
+            { "name": "세라핀", "jobName": "치유성", "dps": 79800 }
+          ]
+        },
+        {
+          "rank": 4,
+          "clearTime": 129.8,
+          "reportId": "pHy7Bv3k",
+          "date": "2026-03-20",
+          "members": [
+            { "name": "아이네하르트", "jobName": "검성", "dps": 254300 },
+            { "name": "루시엘", "jobName": "정령성", "dps": 204600 },
+            { "name": "미라엘", "jobName": "정령성", "dps": 91400 },
+            { "name": "테르반", "jobName": "궁성", "dps": 77200 }
+          ]
+        },
+        {
+          "rank": 5,
+          "clearTime": 134.5,
+          "reportId": "cFd4Km8q",
+          "date": "2026-03-20",
+          "members": [
+            { "name": "다일로스", "jobName": "마도성", "dps": 248100 },
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 199400 },
+            { "name": "아스트라엘", "jobName": "검성", "dps": 88700 },
+            { "name": "카이로스", "jobName": "마도성", "dps": 74600 }
+          ]
+        },
+        {
+          "rank": 6,
+          "clearTime": 139.1,
+          "reportId": "wBn6Jx1v",
+          "date": "2026-03-19",
+          "members": [
+            { "name": "아이네하르트", "jobName": "검성", "dps": 241900 },
+            { "name": "미라엘", "jobName": "정령성", "dps": 194200 },
+            { "name": "카엘타스", "jobName": "궁성", "dps": 86000 },
+            { "name": "세라핀", "jobName": "치유성", "dps": 72000 }
+          ]
+        },
+        {
+          "rank": 7,
+          "clearTime": 143.8,
+          "reportId": "tKm3Rp5h",
+          "date": "2026-03-19",
+          "members": [
+            { "name": "루시엘", "jobName": "정령성", "dps": 235700 },
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 189000 },
+            { "name": "테르반", "jobName": "궁성", "dps": 83300 },
+            { "name": "카이로스", "jobName": "마도성", "dps": 69400 }
+          ]
+        },
+        {
+          "rank": 8,
+          "clearTime": 148.4,
+          "reportId": "yLw9Qz7d",
+          "date": "2026-03-18",
+          "members": [
+            { "name": "아스트라엘", "jobName": "검성", "dps": 229500 },
+            { "name": "다일로스", "jobName": "마도성", "dps": 183800 },
+            { "name": "미라엘", "jobName": "정령성", "dps": 80600 },
+            { "name": "세라핀", "jobName": "치유성", "dps": 66800 }
+          ]
+        },
+        {
+          "rank": 9,
+          "clearTime": 153.0,
+          "reportId": "hNe5Cx2s",
+          "date": "2026-03-18",
+          "members": [
+            { "name": "아이네하르트", "jobName": "검성", "dps": 223300 },
+            { "name": "루시엘", "jobName": "정령성", "dps": 178600 },
+            { "name": "카엘타스", "jobName": "궁성", "dps": 77900 },
+            { "name": "테르반", "jobName": "궁성", "dps": 64200 }
+          ]
+        },
+        {
+          "rank": 10,
+          "clearTime": 157.6,
+          "reportId": "fBt8Mv4n",
+          "date": "2026-03-17",
+          "members": [
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 217100 },
+            { "name": "아스트라엘", "jobName": "검성", "dps": 173400 },
+            { "name": "다일로스", "jobName": "마도성", "dps": 75200 },
+            { "name": "카이로스", "jobName": "마도성", "dps": 61600 }
+          ]
+        }
       ],
       "2": [
-        { "rank": 1, "clearTime": 158.4, "reportId": "aQr2Tx6u", "date": "2026-03-22", "members": [{"name":"루시엘","jobName":"정령사","dps":318400},{"name":"아이네하르트","jobName":"검사","dps":256800},{"name":"레이나흐트","jobName":"격투가","dps":112400},{"name":"세라핀","jobName":"성직자","dps":95200}] },
-        { "rank": 2, "clearTime": 165.2, "reportId": "sEm7Gk3j", "date": "2026-03-21", "members": [{"name":"아이네하르트","jobName":"검사","dps":304100},{"name":"다일로스","jobName":"마법사","dps":245600},{"name":"카엘타스","jobName":"사수","dps":107800},{"name":"미라엘","jobName":"정령사","dps":91400}] },
-        { "rank": 3, "clearTime": 172.0, "reportId": "vDn9Wp8c", "date": "2026-03-20", "members": [{"name":"다일로스","jobName":"마법사","dps":289700},{"name":"레이나흐트","jobName":"격투가","dps":234200},{"name":"아스트라엘","jobName":"검사","dps":103200},{"name":"테르반","jobName":"사수","dps":87600}] },
-        { "rank": 4, "clearTime": 178.8, "reportId": "bFr4Yq2m", "date": "2026-03-20", "members": [{"name":"레이나흐트","jobName":"격투가","dps":275300},{"name":"루시엘","jobName":"정령사","dps":222800},{"name":"미라엘","jobName":"정령사","dps":98600},{"name":"카이로스","jobName":"마법사","dps":83800}] },
-        { "rank": 5, "clearTime": 185.6, "reportId": "cGs5Zr3n", "date": "2026-03-19", "members": [{"name":"카엘타스","jobName":"사수","dps":261800},{"name":"아이네하르트","jobName":"검사","dps":211400},{"name":"세라핀","jobName":"성직자","dps":94000},{"name":"아스트라엘","jobName":"검사","dps":80000}] }
+        {
+          "rank": 1,
+          "clearTime": 158.4,
+          "reportId": "aQr2Tx6u",
+          "date": "2026-03-22",
+          "members": [
+            { "name": "루시엘", "jobName": "정령성", "dps": 318400 },
+            { "name": "아이네하르트", "jobName": "검성", "dps": 256800 },
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 112400 },
+            { "name": "세라핀", "jobName": "치유성", "dps": 95200 }
+          ]
+        },
+        {
+          "rank": 2,
+          "clearTime": 165.2,
+          "reportId": "sEm7Gk3j",
+          "date": "2026-03-21",
+          "members": [
+            { "name": "아이네하르트", "jobName": "검성", "dps": 304100 },
+            { "name": "다일로스", "jobName": "마도성", "dps": 245600 },
+            { "name": "카엘타스", "jobName": "궁성", "dps": 107800 },
+            { "name": "미라엘", "jobName": "정령성", "dps": 91400 }
+          ]
+        },
+        {
+          "rank": 3,
+          "clearTime": 172.0,
+          "reportId": "vDn9Wp8c",
+          "date": "2026-03-20",
+          "members": [
+            { "name": "다일로스", "jobName": "마도성", "dps": 289700 },
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 234200 },
+            { "name": "아스트라엘", "jobName": "검성", "dps": 103200 },
+            { "name": "테르반", "jobName": "궁성", "dps": 87600 }
+          ]
+        },
+        {
+          "rank": 4,
+          "clearTime": 178.8,
+          "reportId": "bFr4Yq2m",
+          "date": "2026-03-20",
+          "members": [
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 275300 },
+            { "name": "루시엘", "jobName": "정령성", "dps": 222800 },
+            { "name": "미라엘", "jobName": "정령성", "dps": 98600 },
+            { "name": "카이로스", "jobName": "마도성", "dps": 83800 }
+          ]
+        },
+        {
+          "rank": 5,
+          "clearTime": 185.6,
+          "reportId": "cGs5Zr3n",
+          "date": "2026-03-19",
+          "members": [
+            { "name": "카엘타스", "jobName": "궁성", "dps": 261800 },
+            { "name": "아이네하르트", "jobName": "검성", "dps": 211400 },
+            { "name": "세라핀", "jobName": "치유성", "dps": 94000 },
+            { "name": "아스트라엘", "jobName": "검성", "dps": 80000 }
+          ]
+        }
       ],
       "3": [
-        { "rank": 1, "clearTime": 198.6, "reportId": "nGk6Lv3r", "date": "2026-03-22", "members": [{"name":"아이네하르트","jobName":"검사","dps":341200},{"name":"루시엘","jobName":"정령사","dps":275800},{"name":"레이나흐트","jobName":"격투가","dps":121400},{"name":"세라핀","jobName":"성직자","dps":102800}] },
-        { "rank": 2, "clearTime": 207.4, "reportId": "oJm8Nx5q", "date": "2026-03-21", "members": [{"name":"루시엘","jobName":"정령사","dps":325600},{"name":"다일로스","jobName":"마법사","dps":263200},{"name":"카엘타스","jobName":"사수","dps":116000},{"name":"미라엘","jobName":"정령사","dps":98400}] },
-        { "rank": 3, "clearTime": 216.2, "reportId": "pKn2Oy4w", "date": "2026-03-20", "members": [{"name":"다일로스","jobName":"마법사","dps":308900},{"name":"레이나흐트","jobName":"격투가","dps":250600},{"name":"아스트라엘","jobName":"검사","dps":110600},{"name":"테르반","jobName":"사수","dps":94000}] }
+        {
+          "rank": 1,
+          "clearTime": 198.6,
+          "reportId": "nGk6Lv3r",
+          "date": "2026-03-22",
+          "members": [
+            { "name": "아이네하르트", "jobName": "검성", "dps": 341200 },
+            { "name": "루시엘", "jobName": "정령성", "dps": 275800 },
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 121400 },
+            { "name": "세라핀", "jobName": "치유성", "dps": 102800 }
+          ]
+        },
+        {
+          "rank": 2,
+          "clearTime": 207.4,
+          "reportId": "oJm8Nx5q",
+          "date": "2026-03-21",
+          "members": [
+            { "name": "루시엘", "jobName": "정령성", "dps": 325600 },
+            { "name": "다일로스", "jobName": "마도성", "dps": 263200 },
+            { "name": "카엘타스", "jobName": "궁성", "dps": 116000 },
+            { "name": "미라엘", "jobName": "정령성", "dps": 98400 }
+          ]
+        },
+        {
+          "rank": 3,
+          "clearTime": 216.2,
+          "reportId": "pKn2Oy4w",
+          "date": "2026-03-20",
+          "members": [
+            { "name": "다일로스", "jobName": "마도성", "dps": 308900 },
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 250600 },
+            { "name": "아스트라엘", "jobName": "검성", "dps": 110600 },
+            { "name": "테르반", "jobName": "궁성", "dps": 94000 }
+          ]
+        }
       ]
     },
     "dratamar": {
       "1": [
-        { "rank": 1, "clearTime": 168.2, "reportId": "wSt0Qv4z", "date": "2026-03-22", "members": [{"name":"루시엘","jobName":"정령사","dps":412800},{"name":"아이네하르트","jobName":"검사","dps":334200},{"name":"레이나흐트","jobName":"격투가","dps":146800},{"name":"세라핀","jobName":"성직자","dps":124400}] },
-        { "rank": 2, "clearTime": 176.8, "reportId": "xTu1Rw5a", "date": "2026-03-21", "members": [{"name":"아이네하르트","jobName":"검사","dps":392100},{"name":"다일로스","jobName":"마법사","dps":318200},{"name":"카엘타스","jobName":"사수","dps":140200},{"name":"미라엘","jobName":"정령사","dps":118800}] },
-        { "rank": 3, "clearTime": 185.4, "reportId": "yUv2Sx6b", "date": "2026-03-20", "members": [{"name":"레이나흐트","jobName":"격투가","dps":371500},{"name":"루시엘","jobName":"정령사","dps":302200},{"name":"아스트라엘","jobName":"검사","dps":133600},{"name":"테르반","jobName":"사수","dps":113200}] }
+        {
+          "rank": 1,
+          "clearTime": 168.2,
+          "reportId": "wSt0Qv4z",
+          "date": "2026-03-22",
+          "members": [
+            { "name": "루시엘", "jobName": "정령성", "dps": 412800 },
+            { "name": "아이네하르트", "jobName": "검성", "dps": 334200 },
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 146800 },
+            { "name": "세라핀", "jobName": "치유성", "dps": 124400 }
+          ]
+        },
+        {
+          "rank": 2,
+          "clearTime": 176.8,
+          "reportId": "xTu1Rw5a",
+          "date": "2026-03-21",
+          "members": [
+            { "name": "아이네하르트", "jobName": "검성", "dps": 392100 },
+            { "name": "다일로스", "jobName": "마도성", "dps": 318200 },
+            { "name": "카엘타스", "jobName": "궁성", "dps": 140200 },
+            { "name": "미라엘", "jobName": "정령성", "dps": 118800 }
+          ]
+        },
+        {
+          "rank": 3,
+          "clearTime": 185.4,
+          "reportId": "yUv2Sx6b",
+          "date": "2026-03-20",
+          "members": [
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 371500 },
+            { "name": "루시엘", "jobName": "정령성", "dps": 302200 },
+            { "name": "아스트라엘", "jobName": "검성", "dps": 133600 },
+            { "name": "테르반", "jobName": "궁성", "dps": 113200 }
+          ]
+        }
       ],
       "2": [
-        { "rank": 1, "clearTime": 208.4, "reportId": "zVw3Ty7c", "date": "2026-03-22", "members": [{"name":"아이네하르트","jobName":"검사","dps":428400},{"name":"루시엘","jobName":"정령사","dps":348000},{"name":"레이나흐트","jobName":"격투가","dps":152800},{"name":"세라핀","jobName":"성직자","dps":129600}] },
-        { "rank": 2, "clearTime": 218.6, "reportId": "aWx4Uz8d", "date": "2026-03-21", "members": [{"name":"다일로스","jobName":"마법사","dps":406900},{"name":"아이네하르트","jobName":"검사","dps":330400},{"name":"카엘타스","jobName":"사수","dps":145800},{"name":"미라엘","jobName":"정령사","dps":123600}] }
+        {
+          "rank": 1,
+          "clearTime": 208.4,
+          "reportId": "zVw3Ty7c",
+          "date": "2026-03-22",
+          "members": [
+            { "name": "아이네하르트", "jobName": "검성", "dps": 428400 },
+            { "name": "루시엘", "jobName": "정령성", "dps": 348000 },
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 152800 },
+            { "name": "세라핀", "jobName": "치유성", "dps": 129600 }
+          ]
+        },
+        {
+          "rank": 2,
+          "clearTime": 218.6,
+          "reportId": "aWx4Uz8d",
+          "date": "2026-03-21",
+          "members": [
+            { "name": "다일로스", "jobName": "마도성", "dps": 406900 },
+            { "name": "아이네하르트", "jobName": "검성", "dps": 330400 },
+            { "name": "카엘타스", "jobName": "궁성", "dps": 145800 },
+            { "name": "미라엘", "jobName": "정령성", "dps": 123600 }
+          ]
+        }
       ],
       "3": [
-        { "rank": 1, "clearTime": 258.2, "reportId": "bXy5Va9e", "date": "2026-03-22", "members": [{"name":"아이네하르트","jobName":"검사","dps":458200},{"name":"루시엘","jobName":"정령사","dps":371800},{"name":"레이나흐트","jobName":"격투가","dps":163600},{"name":"세라핀","jobName":"성직자","dps":138800}] },
-        { "rank": 2, "clearTime": 270.8, "reportId": "cYz6Wb0f", "date": "2026-03-21", "members": [{"name":"루시엘","jobName":"정령사","dps":431600},{"name":"다일로스","jobName":"마법사","dps":351200},{"name":"카엘타스","jobName":"사수","dps":154800},{"name":"미라엘","jobName":"정령사","dps":131200}] }
+        {
+          "rank": 1,
+          "clearTime": 258.2,
+          "reportId": "bXy5Va9e",
+          "date": "2026-03-22",
+          "members": [
+            { "name": "아이네하르트", "jobName": "검성", "dps": 458200 },
+            { "name": "루시엘", "jobName": "정령성", "dps": 371800 },
+            { "name": "레이나흐트", "jobName": "수호성", "dps": 163600 },
+            { "name": "세라핀", "jobName": "치유성", "dps": 138800 }
+          ]
+        },
+        {
+          "rank": 2,
+          "clearTime": 270.8,
+          "reportId": "cYz6Wb0f",
+          "date": "2026-03-21",
+          "members": [
+            { "name": "루시엘", "jobName": "정령성", "dps": 431600 },
+            { "name": "다일로스", "jobName": "마도성", "dps": 351200 },
+            { "name": "카엘타스", "jobName": "궁성", "dps": 154800 },
+            { "name": "미라엘", "jobName": "정령성", "dps": 131200 }
+          ]
+        }
       ]
     }
   },
@@ -104,43 +379,366 @@
   "personalDps": {
     "choeol-4": {
       "1": [
-        { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 285708, "clearTime": 132.5, "reportId": "kPx2Qm9r", "date": "2026-03-22", "critRate": 82.9, "damagePercent": 44.35, "combatPower": 536043 },
-        { "rank": 2, "characterName": "루시엘", "jobName": "정령사", "dps": 274200, "clearTime": 140.2, "reportId": "mRt9Lw2x", "date": "2026-03-21", "critRate": 74.4, "damagePercent": 41.20, "combatPower": 498210 },
-        { "rank": 3, "characterName": "카엘타스", "jobName": "사수", "dps": 261500, "clearTime": 138.8, "reportId": "zQn1Ax4p", "date": "2026-03-21", "critRate": 68.2, "damagePercent": 38.90, "combatPower": 481350 },
-        { "rank": 4, "characterName": "세라핀", "jobName": "성직자", "dps": 248300, "clearTime": 145.1, "reportId": "pHy7Bv3k", "date": "2026-03-20", "critRate": 71.5, "damagePercent": 36.75, "combatPower": 465820 },
-        { "rank": 5, "characterName": "다일로스", "jobName": "마법사", "dps": 239100, "clearTime": 152.3, "reportId": "cFd4Km8q", "date": "2026-03-20", "critRate": 65.8, "damagePercent": 35.20, "combatPower": 452100 },
-        { "rank": 6, "characterName": "레이나흐트", "jobName": "격투가", "dps": 228400, "clearTime": 158.6, "reportId": "wBn6Jx1v", "date": "2026-03-19", "critRate": 78.3, "damagePercent": 34.10, "combatPower": 441280 },
-        { "rank": 7, "characterName": "아스트라엘", "jobName": "검사", "dps": 219700, "clearTime": 163.4, "reportId": "tKm3Rp5h", "date": "2026-03-19", "critRate": 80.1, "damagePercent": 32.80, "combatPower": 428930 },
-        { "rank": 8, "characterName": "미라엘", "jobName": "정령사", "dps": 208500, "clearTime": 171.2, "reportId": "yLw9Qz7d", "date": "2026-03-18", "critRate": 69.6, "damagePercent": 30.50, "combatPower": 412450 },
-        { "rank": 9, "characterName": "테르반", "jobName": "사수", "dps": 198200, "clearTime": 176.8, "reportId": "hNe5Cx2s", "date": "2026-03-18", "critRate": 63.4, "damagePercent": 28.90, "combatPower": 398710 },
-        { "rank": 10, "characterName": "카이로스", "jobName": "마법사", "dps": 185600, "clearTime": 184.5, "reportId": "fBt8Mv4n", "date": "2026-03-17", "critRate": 61.2, "damagePercent": 27.10, "combatPower": 381240 }
+        {
+          "rank": 1,
+          "characterName": "아이네하르트",
+          "jobName": "검성",
+          "dps": 285708,
+          "clearTime": 132.5,
+          "reportId": "kPx2Qm9r",
+          "date": "2026-03-22",
+          "critRate": 82.9,
+          "damagePercent": 44.35,
+          "combatPower": 536043
+        },
+        {
+          "rank": 1,
+          "characterName": "아이d네하르트",
+          "jobName": "검성",
+          "dps": 285708,
+          "clearTime": 132.5,
+          "reportId": "kPx23Qm9r",
+          "date": "2026-03-22",
+          "critRate": 82.9,
+          "damagePercent": 44.35,
+          "combatPower": 536043
+        },
+        {
+          "rank": 1,
+          "characterName": "아이네s하르트",
+          "jobName": "검성",
+          "dps": 2851708,
+          "clearTime": 132.5,
+          "reportId": "kP2x42Qm9r",
+          "date": "2026-03-22",
+          "critRate": 82.9,
+          "damagePercent": 44.35,
+          "combatPower": 536043
+        },
+        {
+          "rank": 1,
+          "characterName": "아이네g하르트",
+          "jobName": "검성",
+          "dps": 2852708,
+          "clearTime": 132.5,
+          "reportId": "kPx25Qm9r",
+          "date": "2026-03-22",
+          "critRate": 82.9,
+          "damagePercent": 44.35,
+          "combatPower": 536043
+        },
+        {
+          "rank": 1,
+          "characterName": "아이g네하르트",
+          "jobName": "검성",
+          "dps": 2857308,
+          "clearTime": 132.5,
+          "reportId": "kPx26Qm9r",
+          "date": "2026-03-22",
+          "critRate": 82.9,
+          "damagePercent": 44.35,
+          "combatPower": 536043
+        },
+        {
+          "rank": 2,
+          "characterName": "루시엘",
+          "jobName": "정령성",
+          "dps": 274200,
+          "clearTime": 140.2,
+          "reportId": "mRt97Lw2x",
+          "date": "2026-03-21",
+          "critRate": 74.4,
+          "damagePercent": 41.2,
+          "combatPower": 498210
+        },
+        {
+          "rank": 3,
+          "characterName": "카엘타스",
+          "jobName": "궁성",
+          "dps": 261500,
+          "clearTime": 138.8,
+          "reportId": "zQn1Ax4p",
+          "date": "2026-03-21",
+          "critRate": 68.2,
+          "damagePercent": 38.9,
+          "combatPower": 481350
+        },
+        {
+          "rank": 4,
+          "characterName": "세라핀",
+          "jobName": "치유성",
+          "dps": 248300,
+          "clearTime": 145.1,
+          "reportId": "pHy7Bv3k",
+          "date": "2026-03-20",
+          "critRate": 71.5,
+          "damagePercent": 36.75,
+          "combatPower": 465820
+        },
+        {
+          "rank": 5,
+          "characterName": "다일로스",
+          "jobName": "마도성",
+          "dps": 239100,
+          "clearTime": 152.3,
+          "reportId": "cFd4Km8q",
+          "date": "2026-03-20",
+          "critRate": 65.8,
+          "damagePercent": 35.2,
+          "combatPower": 452100
+        },
+        {
+          "rank": 6,
+          "characterName": "레이나흐트",
+          "jobName": "수호성",
+          "dps": 228400,
+          "clearTime": 158.6,
+          "reportId": "wBn6Jx1v",
+          "date": "2026-03-19",
+          "critRate": 78.3,
+          "damagePercent": 34.1,
+          "combatPower": 441280
+        },
+        {
+          "rank": 7,
+          "characterName": "아스트라엘",
+          "jobName": "검성",
+          "dps": 219700,
+          "clearTime": 163.4,
+          "reportId": "tKm3Rp5h",
+          "date": "2026-03-19",
+          "critRate": 80.1,
+          "damagePercent": 32.8,
+          "combatPower": 428930
+        },
+        {
+          "rank": 8,
+          "characterName": "미라엘",
+          "jobName": "정령성",
+          "dps": 208500,
+          "clearTime": 171.2,
+          "reportId": "yLw9Qz7d",
+          "date": "2026-03-18",
+          "critRate": 69.6,
+          "damagePercent": 30.5,
+          "combatPower": 412450
+        },
+        {
+          "rank": 9,
+          "characterName": "테르반",
+          "jobName": "궁성",
+          "dps": 198200,
+          "clearTime": 176.8,
+          "reportId": "hNe5Cx2s",
+          "date": "2026-03-18",
+          "critRate": 63.4,
+          "damagePercent": 28.9,
+          "combatPower": 398710
+        },
+        {
+          "rank": 10,
+          "characterName": "카이로스",
+          "jobName": "마도성",
+          "dps": 185600,
+          "clearTime": 184.5,
+          "reportId": "fBt8Mv4n",
+          "date": "2026-03-17",
+          "critRate": 61.2,
+          "damagePercent": 27.1,
+          "combatPower": 381240
+        }
       ],
       "2": [
-        { "rank": 1, "characterName": "루시엘", "jobName": "정령사", "dps": 318400, "clearTime": 188.4, "reportId": "aQr2Tx6u", "date": "2026-03-22", "critRate": 76.8, "damagePercent": 43.20, "combatPower": 498210 },
-        { "rank": 2, "characterName": "아이네하르트", "jobName": "검사", "dps": 304100, "clearTime": 195.2, "reportId": "kPx2Qm9r", "date": "2026-03-21", "critRate": 84.2, "damagePercent": 41.80, "combatPower": 536043 },
-        { "rank": 3, "characterName": "다일로스", "jobName": "마법사", "dps": 289700, "clearTime": 202.6, "reportId": "sEm7Gk3j", "date": "2026-03-20", "critRate": 67.3, "damagePercent": 39.10, "combatPower": 452100 },
-        { "rank": 4, "characterName": "레이나흐트", "jobName": "격투가", "dps": 275300, "clearTime": 210.1, "reportId": "vDn9Wp8c", "date": "2026-03-20", "critRate": 79.5, "damagePercent": 37.40, "combatPower": 441280 },
-        { "rank": 5, "characterName": "카엘타스", "jobName": "사수", "dps": 261800, "clearTime": 218.7, "reportId": "bFr4Yq2m", "date": "2026-03-19", "critRate": 70.1, "damagePercent": 35.60, "combatPower": 481350 }
+        {
+          "rank": 1,
+          "characterName": "루시엘",
+          "jobName": "정령성",
+          "dps": 318400,
+          "clearTime": 188.4,
+          "reportId": "aQr2Tx6u",
+          "date": "2026-03-22",
+          "critRate": 76.8,
+          "damagePercent": 43.2,
+          "combatPower": 498210
+        },
+        {
+          "rank": 2,
+          "characterName": "아이네하르트",
+          "jobName": "검성",
+          "dps": 304100,
+          "clearTime": 195.2,
+          "reportId": "kPx2Qm9r",
+          "date": "2026-03-21",
+          "critRate": 84.2,
+          "damagePercent": 41.8,
+          "combatPower": 536043
+        },
+        {
+          "rank": 3,
+          "characterName": "다일로스",
+          "jobName": "마도성",
+          "dps": 289700,
+          "clearTime": 202.6,
+          "reportId": "sEm7Gk3j",
+          "date": "2026-03-20",
+          "critRate": 67.3,
+          "damagePercent": 39.1,
+          "combatPower": 452100
+        },
+        {
+          "rank": 4,
+          "characterName": "레이나흐트",
+          "jobName": "수호성",
+          "dps": 275300,
+          "clearTime": 210.1,
+          "reportId": "vDn9Wp8c",
+          "date": "2026-03-20",
+          "critRate": 79.5,
+          "damagePercent": 37.4,
+          "combatPower": 441280
+        },
+        {
+          "rank": 5,
+          "characterName": "카엘타스",
+          "jobName": "궁성",
+          "dps": 261800,
+          "clearTime": 218.7,
+          "reportId": "bFr4Yq2m",
+          "date": "2026-03-19",
+          "critRate": 70.1,
+          "damagePercent": 35.6,
+          "combatPower": 481350
+        }
       ],
       "3": [
-        { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 341200, "clearTime": 224.8, "reportId": "nGk6Lv3r", "date": "2026-03-22", "critRate": 85.6, "damagePercent": 45.10, "combatPower": 536043 },
-        { "rank": 2, "characterName": "루시엘", "jobName": "정령사", "dps": 325600, "clearTime": 231.5, "reportId": "oJm8Nx5q", "date": "2026-03-21", "critRate": 77.2, "damagePercent": 43.00, "combatPower": 498210 },
-        { "rank": 3, "characterName": "다일로스", "jobName": "마법사", "dps": 308900, "clearTime": 240.3, "reportId": "pKn2Oy4w", "date": "2026-03-20", "critRate": 69.4, "damagePercent": 40.80, "combatPower": 452100 }
+        {
+          "rank": 1,
+          "characterName": "아이네하르트",
+          "jobName": "검성",
+          "dps": 341200,
+          "clearTime": 224.8,
+          "reportId": "nGk6Lv3r",
+          "date": "2026-03-22",
+          "critRate": 85.6,
+          "damagePercent": 45.1,
+          "combatPower": 536043
+        },
+        {
+          "rank": 2,
+          "characterName": "루시엘",
+          "jobName": "정령성",
+          "dps": 325600,
+          "clearTime": 231.5,
+          "reportId": "oJm8Nx5q",
+          "date": "2026-03-21",
+          "critRate": 77.2,
+          "damagePercent": 43.0,
+          "combatPower": 498210
+        },
+        {
+          "rank": 3,
+          "characterName": "다일로스",
+          "jobName": "마도성",
+          "dps": 308900,
+          "clearTime": 240.3,
+          "reportId": "pKn2Oy4w",
+          "date": "2026-03-20",
+          "critRate": 69.4,
+          "damagePercent": 40.8,
+          "combatPower": 452100
+        }
       ]
     },
     "dratamar": {
       "1": [
-        { "rank": 1, "characterName": "루시엘", "jobName": "정령사", "dps": 412800, "clearTime": 198.4, "reportId": "wSt0Qv4z", "date": "2026-03-22", "critRate": 81.6, "damagePercent": 50.20, "combatPower": 498210 },
-        { "rank": 2, "characterName": "아이네하르트", "jobName": "검사", "dps": 392100, "clearTime": 207.8, "reportId": "xTu1Rw5a", "date": "2026-03-21", "critRate": 90.1, "damagePercent": 47.70, "combatPower": 536043 },
-        { "rank": 3, "characterName": "레이나흐트", "jobName": "격투가", "dps": 371500, "clearTime": 217.3, "reportId": "yUv2Sx6b", "date": "2026-03-20", "critRate": 83.4, "damagePercent": 45.10, "combatPower": 441280 }
+        {
+          "rank": 1,
+          "characterName": "루시엘",
+          "jobName": "정령성",
+          "dps": 412800,
+          "clearTime": 198.4,
+          "reportId": "wSt0Qv4z",
+          "date": "2026-03-22",
+          "critRate": 81.6,
+          "damagePercent": 50.2,
+          "combatPower": 498210
+        },
+        {
+          "rank": 2,
+          "characterName": "아이네하르트",
+          "jobName": "검성",
+          "dps": 392100,
+          "clearTime": 207.8,
+          "reportId": "xTu1Rw5a",
+          "date": "2026-03-21",
+          "critRate": 90.1,
+          "damagePercent": 47.7,
+          "combatPower": 536043
+        },
+        {
+          "rank": 3,
+          "characterName": "레이나흐트",
+          "jobName": "수호성",
+          "dps": 371500,
+          "clearTime": 217.3,
+          "reportId": "yUv2Sx6b",
+          "date": "2026-03-20",
+          "critRate": 83.4,
+          "damagePercent": 45.1,
+          "combatPower": 441280
+        }
       ],
       "2": [
-        { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 428400, "clearTime": 248.6, "reportId": "zVw3Ty7c", "date": "2026-03-22", "critRate": 91.2, "damagePercent": 51.80, "combatPower": 536043 },
-        { "rank": 2, "characterName": "다일로스", "jobName": "마법사", "dps": 406900, "clearTime": 257.1, "reportId": "aWx4Uz8d", "date": "2026-03-21", "critRate": 74.8, "damagePercent": 49.20, "combatPower": 452100 }
+        {
+          "rank": 1,
+          "characterName": "아이네하르트",
+          "jobName": "검성",
+          "dps": 428400,
+          "clearTime": 248.6,
+          "reportId": "zVw3Ty7c",
+          "date": "2026-03-22",
+          "critRate": 91.2,
+          "damagePercent": 51.8,
+          "combatPower": 536043
+        },
+        {
+          "rank": 2,
+          "characterName": "다일로스",
+          "jobName": "마도성",
+          "dps": 406900,
+          "clearTime": 257.1,
+          "reportId": "aWx4Uz8d",
+          "date": "2026-03-21",
+          "critRate": 74.8,
+          "damagePercent": 49.2,
+          "combatPower": 452100
+        }
       ],
       "3": [
-        { "rank": 1, "characterName": "아이네하르트", "jobName": "검사", "dps": 458200, "clearTime": 298.4, "reportId": "bXy5Va9e", "date": "2026-03-22", "critRate": 92.3, "damagePercent": 54.10, "combatPower": 536043 },
-        { "rank": 2, "characterName": "루시엘", "jobName": "정령사", "dps": 431600, "clearTime": 308.7, "reportId": "cYz6Wb0f", "date": "2026-03-21", "critRate": 82.9, "damagePercent": 51.00, "combatPower": 498210 }
+        {
+          "rank": 1,
+          "characterName": "아이네하르트",
+          "jobName": "검성",
+          "dps": 458200,
+          "clearTime": 298.4,
+          "reportId": "bXy5Va9e",
+          "date": "2026-03-22",
+          "critRate": 92.3,
+          "damagePercent": 54.1,
+          "combatPower": 536043
+        },
+        {
+          "rank": 2,
+          "characterName": "루시엘",
+          "jobName": "정령성",
+          "dps": 431600,
+          "clearTime": 308.7,
+          "reportId": "cYz6Wb0f",
+          "date": "2026-03-21",
+          "critRate": 82.9,
+          "damagePercent": 51.0,
+          "combatPower": 498210
+        }
       ]
     }
   },
@@ -150,43 +748,43 @@
       "1": {
         "dateRange": { "from": "2026-02-22", "to": "2026-03-22" },
         "data": [
-          { "jobName": "검사",   "min": 198400, "avg": 248600, "max": 285708 },
-          { "jobName": "정령사", "min": 186200, "avg": 234800, "max": 274200 },
-          { "jobName": "사수",   "min": 172400, "avg": 218600, "max": 261500 },
-          { "jobName": "성직자", "min": 158600, "avg": 204400, "max": 248300 },
-          { "jobName": "마법사", "min": 148800, "avg": 196200, "max": 239100 },
-          { "jobName": "격투가", "min": 138000, "avg": 186000, "max": 228400 }
+          { "jobName": "검성", "min": 198400, "avg": 248600, "max": 285708 },
+          { "jobName": "정령성", "min": 186200, "avg": 234800, "max": 274200 },
+          { "jobName": "궁성", "min": 172400, "avg": 218600, "max": 261500 },
+          { "jobName": "치유성", "min": 158600, "avg": 204400, "max": 248300 },
+          { "jobName": "마도성", "min": 148800, "avg": 196200, "max": 239100 },
+          { "jobName": "수호성", "min": 138000, "avg": 186000, "max": 228400 }
         ]
       },
       "2": {
         "dateRange": { "from": "2026-02-22", "to": "2026-03-22" },
         "data": [
-          { "jobName": "정령사", "min": 218600, "avg": 272800, "max": 318400 },
-          { "jobName": "검사",   "min": 204800, "avg": 258400, "max": 304100 },
-          { "jobName": "마법사", "min": 190200, "avg": 244400, "max": 289700 },
-          { "jobName": "격투가", "min": 178400, "avg": 230400, "max": 275300 },
-          { "jobName": "사수",   "min": 166600, "avg": 218200, "max": 261800 }
+          { "jobName": "정령성", "min": 218600, "avg": 272800, "max": 318400 },
+          { "jobName": "검성", "min": 204800, "avg": 258400, "max": 304100 },
+          { "jobName": "마도성", "min": 190200, "avg": 244400, "max": 289700 },
+          { "jobName": "수호성", "min": 178400, "avg": 230400, "max": 275300 },
+          { "jobName": "궁성", "min": 166600, "avg": 218200, "max": 261800 }
         ]
       },
       "3": {
         "dateRange": { "from": "2026-02-22", "to": "2026-03-22" },
         "data": [
-          { "jobName": "검사",   "min": 234800, "avg": 292000, "max": 341200 },
-          { "jobName": "정령사", "min": 218200, "avg": 276400, "max": 325600 },
-          { "jobName": "마법사", "min": 204600, "avg": 260600, "max": 308900 },
-          { "jobName": "정령사", "min": 192000, "avg": 246200, "max": 291400 },
-          { "jobName": "성직자", "min": 178400, "avg": 232800, "max": 276800 }
+          { "jobName": "검성", "min": 234800, "avg": 292000, "max": 341200 },
+          { "jobName": "정령성", "min": 218200, "avg": 276400, "max": 325600 },
+          { "jobName": "마도성", "min": 204600, "avg": 260600, "max": 308900 },
+          { "jobName": "정령성", "min": 192000, "avg": 246200, "max": 291400 },
+          { "jobName": "치유성", "min": 178400, "avg": 232800, "max": 276800 }
         ]
       },
       "all": {
         "dateRange": { "from": "2026-02-22", "to": "2026-03-22" },
         "data": [
-          { "jobName": "검사",   "min": 198400, "avg": 263000, "max": 341200 },
-          { "jobName": "정령사", "min": 186200, "avg": 251000, "max": 325600 },
-          { "jobName": "마법사", "min": 148800, "avg": 234000, "max": 308900 },
-          { "jobName": "사수",   "min": 166600, "avg": 232800, "max": 261800 },
-          { "jobName": "성직자", "min": 158600, "avg": 220600, "max": 276800 },
-          { "jobName": "격투가", "min": 138000, "avg": 208200, "max": 275300 }
+          { "jobName": "검성", "min": 198400, "avg": 263000, "max": 341200 },
+          { "jobName": "정령성", "min": 186200, "avg": 251000, "max": 325600 },
+          { "jobName": "마도성", "min": 148800, "avg": 234000, "max": 308900 },
+          { "jobName": "궁성", "min": 166600, "avg": 232800, "max": 261800 },
+          { "jobName": "치유성", "min": 158600, "avg": 220600, "max": 276800 },
+          { "jobName": "수호성", "min": 138000, "avg": 208200, "max": 275300 }
         ]
       }
     },
@@ -194,40 +792,40 @@
       "1": {
         "dateRange": { "from": "2026-02-22", "to": "2026-03-22" },
         "data": [
-          { "jobName": "정령사", "min": 312400, "avg": 368200, "max": 412800 },
-          { "jobName": "검사",   "min": 298600, "avg": 348400, "max": 392100 },
-          { "jobName": "격투가", "min": 282800, "avg": 330600, "max": 371500 },
-          { "jobName": "마법사", "min": 268200, "avg": 312400, "max": 350900 },
-          { "jobName": "사수",   "min": 254600, "avg": 296200, "max": 330300 }
+          { "jobName": "정령성", "min": 312400, "avg": 368200, "max": 412800 },
+          { "jobName": "검성", "min": 298600, "avg": 348400, "max": 392100 },
+          { "jobName": "수호성", "min": 282800, "avg": 330600, "max": 371500 },
+          { "jobName": "마도성", "min": 268200, "avg": 312400, "max": 350900 },
+          { "jobName": "궁성", "min": 254600, "avg": 296200, "max": 330300 }
         ]
       },
       "2": {
         "dateRange": { "from": "2026-02-22", "to": "2026-03-22" },
         "data": [
-          { "jobName": "검사",   "min": 328400, "avg": 384200, "max": 428400 },
-          { "jobName": "마법사", "min": 312800, "avg": 364600, "max": 406900 },
-          { "jobName": "정령사", "min": 296200, "avg": 346000, "max": 385400 },
-          { "jobName": "격투가", "min": 282600, "avg": 328400, "max": 363900 }
+          { "jobName": "검성", "min": 328400, "avg": 384200, "max": 428400 },
+          { "jobName": "마도성", "min": 312800, "avg": 364600, "max": 406900 },
+          { "jobName": "정령성", "min": 296200, "avg": 346000, "max": 385400 },
+          { "jobName": "수호성", "min": 282600, "avg": 328400, "max": 363900 }
         ]
       },
       "3": {
         "dateRange": { "from": "2026-02-22", "to": "2026-03-22" },
         "data": [
-          { "jobName": "검사",   "min": 348600, "avg": 408400, "max": 458200 },
-          { "jobName": "정령사", "min": 330200, "avg": 386000, "max": 431600 },
-          { "jobName": "격투가", "min": 312800, "avg": 364400, "max": 408300 },
-          { "jobName": "마법사", "min": 296400, "avg": 344800, "max": 385000 },
-          { "jobName": "사수",   "min": 280000, "avg": 326200, "max": 361700 }
+          { "jobName": "검성", "min": 348600, "avg": 408400, "max": 458200 },
+          { "jobName": "정령성", "min": 330200, "avg": 386000, "max": 431600 },
+          { "jobName": "수호성", "min": 312800, "avg": 364400, "max": 408300 },
+          { "jobName": "마도성", "min": 296400, "avg": 344800, "max": 385000 },
+          { "jobName": "궁성", "min": 280000, "avg": 326200, "max": 361700 }
         ]
       },
       "all": {
         "dateRange": { "from": "2026-02-22", "to": "2026-03-22" },
         "data": [
-          { "jobName": "검사",   "min": 298600, "avg": 380000, "max": 458200 },
-          { "jobName": "정령사", "min": 296200, "avg": 366800, "max": 431600 },
-          { "jobName": "격투가", "min": 282600, "avg": 341400, "max": 408300 },
-          { "jobName": "마법사", "min": 268200, "avg": 340600, "max": 406900 },
-          { "jobName": "사수",   "min": 254600, "avg": 311200, "max": 361700 }
+          { "jobName": "검성", "min": 298600, "avg": 380000, "max": 458200 },
+          { "jobName": "정령성", "min": 296200, "avg": 366800, "max": 431600 },
+          { "jobName": "수호성", "min": 282600, "avg": 341400, "max": 408300 },
+          { "jobName": "마도성", "min": 268200, "avg": 340600, "max": 406900 },
+          { "jobName": "궁성", "min": 254600, "avg": 311200, "max": 361700 }
         ]
       }
     }

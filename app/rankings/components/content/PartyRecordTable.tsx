@@ -8,6 +8,7 @@ import JobBadge from "@/components/shared/JobBadge"
 import RankBadge from "@/components/shared/RankBadge"
 import { DataTable } from "@/components/table"
 import type { PartyRecord, PartyMember } from "../../types"
+import { useRouter } from "next/navigation"
 
 function avgDps(members: PartyMember[]): number {
   if (!members.length) return 0
@@ -19,18 +20,15 @@ interface PartyRecordTableProps {
 }
 
 export default function PartyRecordTable({ records }: PartyRecordTableProps) {
+  const router = useRouter()
   const columns: ColumnDef<PartyRecord>[] = useMemo(
     () => [
       {
         id: "rank",
         size: 48,
-        header: () => (
-          <span className="block text-center text-[10px] uppercase tracking-wider">
-            #
-          </span>
-        ),
+        header: () => <span className="">#</span>,
         cell: ({ row }) => (
-          <div className="text-center">
+          <div className="">
             <RankBadge rank={row.original.rank ?? row.index + 1} />
           </div>
         ),
@@ -38,25 +36,23 @@ export default function PartyRecordTable({ records }: PartyRecordTableProps) {
       },
       {
         accessorKey: "clearTime",
-        size: 80,
-        header: () => (
-          <span className="text-[10px] uppercase tracking-wider">클리어</span>
-        ),
+        meta: {
+          sortable: true,
+        },
+        header: () => <span className="">클리어</span>,
         cell: ({ getValue }) => (
-          <span className="text-sm font-bold tabular-nums">
-            {fmtTimeMmSs(getValue<number>())}
-          </span>
+          <span className="font-bold">{fmtTimeMmSs(getValue<number>())}</span>
         ),
         enableSorting: false,
       },
       {
-        id: "avgDps",
-        size: 112,
-        header: () => (
-          <span className="text-[10px] uppercase tracking-wider">평균 DPS</span>
-        ),
+        accessorKey: "avgDps",
+        meta: {
+          sortable: true,
+        },
+        header: () => <span className="">평균 DPS</span>,
         cell: ({ row }) => (
-          <span className="text-sm font-semibold tabular-nums text-primary">
+          <span className="font-semibold text-primary">
             {fmtDps(avgDps(row.original.members))}
           </span>
         ),
@@ -64,11 +60,9 @@ export default function PartyRecordTable({ records }: PartyRecordTableProps) {
       },
       {
         id: "composition",
-        header: () => (
-          <span className="text-[10px] uppercase tracking-wider">파티 구성</span>
-        ),
+        header: () => <span className="">파티 구성</span>,
         cell: ({ row }) => (
-          <div className="flex items-center gap-1 flex-wrap">
+          <div className="flex flex-wrap items-center gap-1">
             {row.original.members.map((m, i) => (
               <JobBadge key={i} job={m.jobName} />
             ))}
@@ -78,13 +72,11 @@ export default function PartyRecordTable({ records }: PartyRecordTableProps) {
       },
       {
         id: "members",
-        header: () => (
-          <span className="text-[10px] uppercase tracking-wider">멤버</span>
-        ),
+        header: () => <span>멤버</span>,
         cell: ({ row }) => (
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex flex-wrap gap-2">
             {row.original.members.map((member, i) => (
-              <span key={i} className="text-xs font-medium">
+              <span key={i} className="font-medium">
                 {member.name}
               </span>
             ))}
@@ -92,48 +84,27 @@ export default function PartyRecordTable({ records }: PartyRecordTableProps) {
         ),
         enableSorting: false,
       },
-      {
-        accessorKey: "reportId",
-        header: () => (
-          <span className="block text-right text-[10px] uppercase tracking-wider">
-            리포트
-          </span>
-        ),
-        cell: ({ getValue }) => (
-          <div className="text-right">
-            <a
-              href={`/reports/${getValue<string>()}`}
-              className="font-mono text-[11px] text-primary hover:underline"
-            >
-              #{getValue<string>().slice(0, 6)}
-            </a>
-          </div>
-        ),
-        enableSorting: false,
-      },
+
       {
         accessorKey: "date",
-        header: () => (
-          <span className="block text-right text-[10px] uppercase tracking-wider">
-            날짜
-          </span>
-        ),
-        cell: ({ getValue }) => (
-          <span className="block text-right text-[11px] whitespace-nowrap text-muted-foreground">
-            {getValue<string>()}
-          </span>
-        ),
+        header: () => <span className="">날짜</span>,
+        cell: ({ getValue }) => <span className="">{getValue<string>()}</span>,
         enableSorting: false,
       },
     ],
     []
   )
 
+  const onClickRow = (row: PartyRecord) => {
+    console.log(row)
+    router.push(`reports/${row.reportId}`)
+  }
   return (
     <DataTable
       columns={columns}
       data={records}
       emptyMessage="파티 기록이 없습니다."
+      onClickRow={(row) => onClickRow(row)}
     />
   )
 }

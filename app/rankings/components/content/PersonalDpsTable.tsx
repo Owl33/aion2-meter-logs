@@ -8,18 +8,16 @@ import { fmtDps, fmtTimeMmSs, fmtNumber } from "@/lib/formatters"
 import JobBadge from "@/components/shared/JobBadge"
 import DpsBar from "@/components/shared/DpsBar"
 import RankBadge from "@/components/shared/RankBadge"
-import {
-  DataTable,
-  DataTableColumnHeader,
-  DataTableToolbar,
-} from "@/components/table"
+import { DataTable, DataTableToolbar } from "@/components/table"
 import type { PersonalEntry } from "../../types"
+import { useRouter } from "next/navigation"
 
 interface PersonalDpsTableProps {
   entries: PersonalEntry[]
 }
 
 export default function PersonalDpsTable({ entries }: PersonalDpsTableProps) {
+  const router = useRouter()
   const maxDps = useMemo(
     () => (entries.length ? Math.max(...entries.map((e) => e.dps)) : 1),
     [entries]
@@ -37,32 +35,26 @@ export default function PersonalDpsTable({ entries }: PersonalDpsTableProps) {
         size: 48,
         // 정렬/필터 후 row.index 기준으로 rank 표시
         cell: ({ row }) => (
-          <div className="text-center">
+          <div className="">
             <RankBadge rank={row.index + 1} />
           </div>
         ),
-        header: () => (
-          <span className="block text-center text-[10px] tracking-wider uppercase">
-            #
-          </span>
-        ),
+        header: () => <span className="">#</span>,
         enableSorting: false,
       },
       {
         accessorKey: "characterName",
-        header: () => (
-          <span className="text-[10px] tracking-wider uppercase">캐릭터</span>
-        ),
+        header: () => <span className="">캐릭터</span>,
         cell: ({ getValue }) => (
-          <span className="text-sm font-semibold">{getValue<string>()}</span>
+          <div className="h-full transition-all duration-250 hover:scale-105 hover:text-primary">
+            {getValue<string>()}
+          </div>
         ),
         enableSorting: false,
       },
       {
         accessorKey: "jobName",
-        header: () => (
-          <span className="text-[10px] tracking-wider uppercase">직업</span>
-        ),
+        header: () => <span className="">직업</span>,
         cell: ({ getValue }) => <JobBadge job={getValue<string>()} />,
         filterFn: (row, _, filterValue) =>
           filterValue === "전체" || row.original.jobName === filterValue,
@@ -71,89 +63,56 @@ export default function PersonalDpsTable({ entries }: PersonalDpsTableProps) {
       {
         accessorKey: "dps",
         sortDescFirst: true,
-        header: ({ column }) => (
-          <div className="text-right">
-            <DataTableColumnHeader column={column} title="Best DPS" />
-          </div>
-        ),
+        meta: {
+          sortable: true,
+        },
+        header: ({ column }) => <div className="">Best DPS</div>,
         cell: ({ getValue, column }) => (
-          <span
-            className={cn(
-              "block text-right text-sm font-bold tabular-nums",
-              column.getIsSorted() && "text-primary"
-            )}
-          >
-            {fmtDps(getValue<number>())}
-          </span>
+          <span>{fmtDps(getValue<number>())}</span>
         ),
       },
       {
         accessorKey: "clearTime",
+        meta: {
+          sortable: true,
+        },
         sortDescFirst: false, // 클리어는 오름차순이 좋은 값
-        header: ({ column }) => (
-          <div className="text-right">
-            <DataTableColumnHeader column={column} title="클리어" />
-          </div>
-        ),
+        header: ({ column }) => <div className="">클리어</div>,
         cell: ({ getValue, column }) => (
-          <span
-            className={cn(
-              "block text-right tabular-nums",
-              column.getIsSorted() && "font-semibold text-primary"
-            )}
-          >
-            {fmtTimeMmSs(getValue<number>())}
-          </span>
+          <span>{fmtTimeMmSs(getValue<number>())}</span>
         ),
       },
       {
         accessorKey: "critRate",
         sortDescFirst: true,
-        header: ({ column }) => (
-          <div className="text-right">
-            <DataTableColumnHeader column={column} title="치명타" />
-          </div>
-        ),
+        meta: {
+          sortable: true,
+        },
+        header: ({ column }) => <div>치명타</div>,
         cell: ({ getValue, column }) => {
           const v = getValue<number>()
-          return (
-            <span
-              className={cn(
-                "block text-right tabular-nums",
-                v >= 80 && "font-semibold text-amber-500",
-                column.getIsSorted() && "text-primary"
-              )}
-            >
-              {v.toFixed(1)}%
-            </span>
-          )
+          return <span>{v.toFixed(1)}%</span>
         },
       },
       {
         accessorKey: "combatPower",
         sortDescFirst: true,
+        meta: {
+          sortable: true,
+        },
         header: ({ column }) => (
-          <div className="text-right">
-            <DataTableColumnHeader column={column} title="전투력" />
+          <div>
+            전투력
+            {/* <DataTableColumnHeader column={column} title="전투력" /> */}
           </div>
         ),
         cell: ({ getValue, column }) => (
-          <span
-            className={cn(
-              "block text-right tabular-nums",
-              column.getIsSorted() && "font-semibold text-primary"
-            )}
-          >
-            {fmtNumber(getValue<number>())}
-          </span>
+          <span>{fmtNumber(getValue<number>())}</span>
         ),
       },
       {
         id: "dpsBar",
-        size: 160,
-        header: () => (
-          <span className="text-[10px] tracking-wider uppercase">비율</span>
-        ),
+        header: () => <span>비율</span>,
         cell: ({ row }) => (
           <DpsBar
             percent={(row.original.dps / maxDps) * 100}
@@ -162,43 +121,20 @@ export default function PersonalDpsTable({ entries }: PersonalDpsTableProps) {
         ),
         enableSorting: false,
       },
-      {
-        accessorKey: "reportId",
-        header: () => (
-          <span className="block text-right text-[10px] tracking-wider uppercase">
-            리포트
-          </span>
-        ),
-        cell: ({ getValue }) => (
-          <div className="text-right">
-            <a
-              href={`/reports/${getValue<string>()}`}
-              className="font-mono text-[11px] text-primary hover:underline"
-            >
-              #{getValue<string>().slice(0, 6)}
-            </a>
-          </div>
-        ),
-        enableSorting: false,
-      },
+
       {
         accessorKey: "date",
-        header: () => (
-          <span className="block text-right text-[10px] tracking-wider uppercase">
-            날짜
-          </span>
-        ),
-        cell: ({ getValue }) => (
-          <span className="block text-right text-[11px] whitespace-nowrap text-muted-foreground">
-            {getValue<string>()}
-          </span>
-        ),
+        header: () => <span className="">날짜</span>,
+        cell: ({ getValue }) => <span>{getValue<string>()}</span>,
         enableSorting: false,
       },
     ],
     [maxDps]
   )
-
+  const onClickRow = (row: PersonalEntry) => {
+    console.log(row)
+    router.push(`reports/${row.reportId}`)
+  }
   return (
     <DataTable
       columns={columns}
@@ -208,6 +144,7 @@ export default function PersonalDpsTable({ entries }: PersonalDpsTableProps) {
       toolbar={(table) => (
         <DataTableToolbar table={table} columnId="jobName" jobs={allJobs} />
       )}
+      onClickRow={(row) => onClickRow(row)}
     />
   )
 }

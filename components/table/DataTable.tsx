@@ -12,6 +12,7 @@ import {
   type SortingState,
   type ColumnFiltersState,
   type VisibilityState,
+  type HeaderContext,
 } from "@tanstack/react-table"
 import { useState } from "react"
 import {
@@ -23,6 +24,8 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { DataTableFooter } from "./DataTableFooter"
+import { DataTableHeaderCell } from "./DataTableHeaderCell"
+import { cn } from "@/lib/utils"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -30,12 +33,36 @@ interface DataTableProps<TData, TValue> {
   toolbar?: (table: ReturnType<typeof useReactTable<TData>>) => React.ReactNode
   emptyMessage?: string
   pageSize?: number
-  /** false로 넘기면 footer 자체가 렌더되지 않음 */
   pagination?: boolean
-  // 무한스크롤 관련 props는 외부 데이터 페칭이 필요할 때만 선택적으로
   hasMore?: boolean
   onLoadMore?: () => void
   isLoadingMore?: boolean
+  onClickRow?: (row: TData) => void
+}
+
+function extractHeaderTitle<TData, TValue>(
+  col: ColumnDef<TData, TValue>,
+  ctx: HeaderContext<TData, TValue>
+): string {
+  const meta = col.meta as { title?: string } | undefined
+
+  if (meta?.title) return meta.title
+
+  if (typeof col.header === "string") return col.header
+
+  if (typeof col.header === "function") {
+    const rendered = col.header(ctx)
+    if (
+      rendered &&
+      typeof rendered === "object" &&
+      "props" in rendered &&
+      typeof rendered.props?.children === "string"
+    ) {
+      return rendered.props.children
+    }
+  }
+
+  return ("accessorKey" in col ? String(col.accessorKey) : col.id) ?? ""
 }
 
 export function DataTable<TData, TValue>({
@@ -47,7 +74,7 @@ export function DataTable<TData, TValue>({
   hasMore = false,
   onLoadMore,
   pagination = true,
-
+  onClickRow,
   isLoadingMore = false,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([])
@@ -59,22 +86,41 @@ export function DataTable<TData, TValue>({
     pageSize,
   })
 
+  // meta.sortable 기반으로 enableSorting 주입 + 헤더를 DataTableHeaderCell로 자동 래핑
+  const normalizedColumns = columns.map((col) => {
+    const sortable =
+      (col.meta as { sortable?: boolean } | undefined)?.sortable ?? false
+
+    if (!sortable) {
+      return { ...col, enableSorting: false } as ColumnDef<TData, TValue>
+    }
+
+    return {
+      ...col,
+      enableSorting: true,
+      header: (ctx: HeaderContext<TData, TValue>) => (
+        <DataTableHeaderCell
+          column={ctx.column}
+          title={extractHeaderTitle(col, ctx)}
+        />
+      ),
+    } as ColumnDef<TData, TValue>
+  })
+
   const table = useReactTable({
     data,
-    columns,
+    columns: normalizedColumns,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     onSortingChange: setSorting,
     onColumnFiltersChange: (updater) => {
-      // 필터 바뀌면 첫 페이지로
       setColumnFilters(updater)
       setPaginationState((p) => ({ ...p, pageIndex: 0 }))
     },
     onColumnVisibilityChange: setColumnVisibility,
     onPaginationChange: setPaginationState,
-    // 무한스크롤 모드일 때는 pageSize를 전체 데이터 수로 설정해 한 번에 다 보여줌
     state: {
       sorting,
       columnFilters,
@@ -89,7 +135,6 @@ export function DataTable<TData, TValue>({
 
   const handleModeChange = (next: "pagination" | "infinite") => {
     setMode(next)
-    // 페이지네이션으로 돌아올 때 첫 페이지로 리셋
     if (next === "pagination") {
       setPaginationState((p) => ({ ...p, pageIndex: 0 }))
     }
@@ -100,7 +145,7 @@ export function DataTable<TData, TValue>({
       {toolbar?.(table)}
 
       <Table className="overflow-hidden rounded-lg">
-        <TableHeader className="">
+        <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow
               key={headerGroup.id}
@@ -122,9 +167,19 @@ export function DataTable<TData, TValue>({
         <TableBody>
           {table.getRowModel().rows.length ? (
             table.getRowModel().rows.map((row) => (
-              <TableRow key={row.id} className="align-middle hover:bg-muted/30">
+              <TableRow
+                onClick={() => onClickRow?.(row.original)}
+                key={row.id}
+                className={cn(
+                  "border-b-gray-100 transition-all duration-250 ease-in-out",
+                  onClickRow && "cursor-pointer hover:-translate-y-0.5"
+                )}
+              >
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
+                  <TableCell
+                    className="first:rounded-l-lg last:rounded-r-lg"
+                    key={cell.id}
+                  >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}

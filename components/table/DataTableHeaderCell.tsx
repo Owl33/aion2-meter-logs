@@ -1,24 +1,29 @@
-// components/table/DataTableColumnHeader.tsx
-import type { Column } from "@tanstack/react-table"
+// components/table/DataTableHeaderCell.tsx
+import type { Column, RowData } from "@tanstack/react-table"
 import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-interface DataTableColumnHeaderProps<TData, TValue> {
+// ColumnDef의 meta 타입을 전역으로 확장
+declare module "@tanstack/react-table" {
+  interface ColumnMeta<TData extends RowData, TValue> {
+    sortable?: boolean
+  }
+}
+
+interface DataTableHeaderCellProps<TData, TValue> {
   column: Column<TData, TValue>
   title: string
   className?: string
 }
 
-export function DataTableColumnHeader<TData, TValue>({
+export function DataTableHeaderCell<TData, TValue>({
   column,
   title,
   className,
-}: DataTableColumnHeaderProps<TData, TValue>) {
+}: DataTableHeaderCellProps<TData, TValue>) {
   if (!column.getCanSort()) {
     return (
-      <span className={cn("text-[10px] uppercase tracking-wider", className)}>
-        {title}
-      </span>
+      <span className={cn("tracking-wider uppercase", className)}>{title}</span>
     )
   }
 
@@ -27,9 +32,8 @@ export function DataTableColumnHeader<TData, TValue>({
   return (
     <button
       className={cn(
-        "flex items-center gap-1 text-[10px] uppercase tracking-wider select-none",
-        "transition-colors hover:text-foreground cursor-pointer",
-        sorted ? "text-primary font-semibold" : "text-muted-foreground",
+        "flex items-center justify-center gap-2",
+        sorted ? "font-semibold text-primary" : "",
         className
       )}
       onClick={() => column.toggleSorting(sorted === "asc")}
