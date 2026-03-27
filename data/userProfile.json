@@ -1,0 +1,170 @@
+{
+  "characterName": "아이온전사",
+  "jobName": "검성",
+  "jobCode": 101,
+  "serverId": 1,
+  "serverName": "카이네리스",
+  "combatPower": 142800,
+  "totalClears": 24,
+  "bestDps": 87420,
+  "avgDps": 71340,
+  "avgCritRate": 68.4,
+  "firstSeen": "2025-01-12",
+  "lastSeen": "2025-03-20",
+  "dungeonStats": [
+    {
+      "dungeonId": "d1",
+      "dungeonName": "심연의 탑",
+      "clears": 12,
+      "bestDps": 87420,
+      "avgDps": 76800,
+      "bestClearTime": 312,
+      "globalRank": 12,
+      "bosses": [
+        { "index": 1, "name": "어둠의 수호자", "clears": 12, "bestDps": 61200, "globalRank": 18 },
+        { "index": 2, "name": "심연의 군주",   "clears": 8,  "bestDps": 87420, "globalRank": 12 },
+        { "index": 3, "name": "공허의 신",     "clears": 3,  "bestDps": 79100, "globalRank": 27 }
+      ]
+    },
+    {
+      "dungeonId": "d2",
+      "dungeonName": "불꽃의 성채",
+      "clears": 8,
+      "bestDps": 82100,
+      "avgDps": 68200,
+      "bestClearTime": 428,
+      "globalRank": 31,
+      "bosses": [
+        { "index": 1, "name": "화염 골렘",   "clears": 8, "bestDps": 71300, "globalRank": 44 },
+        { "index": 2, "name": "용암의 지배자","clears": 5, "bestDps": 82100, "globalRank": 31 }
+      ]
+    },
+    {
+      "dungeonId": "d3",
+      "dungeonName": "서리바람 요새",
+      "clears": 4,
+      "bestDps": 74500,
+      "avgDps": 61000,
+      "bestClearTime": 551,
+      "globalRank": null,
+      "bosses": [
+        { "index": 1, "name": "서리 골렘",    "clears": 4, "bestDps": 58900, "globalRank": null },
+        { "index": 2, "name": "빙하의 군주",  "clears": 2, "bestDps": 74500, "globalRank": null }
+      ]
+    }
+  ],
+  "recentLogs": [
+    {
+      "reportId": "kPx2Qm9r",
+      "date": "2025-03-20",
+      "dungeonName": "심연의 탑",
+      "dungeonId": "d1",
+      "bossIndex": 2,
+      "bossName": "심연의 군주",
+      "dps": 87420,
+      "clearTime": 312,
+      "critRate": 72.1,
+      "damagePercent": 34.2,
+      "partyDps": 255600,
+      "combatPower": 142800
+    },
+    {
+      "reportId": "aB3kLm7p",
+      "date": "2025-03-18",
+      "dungeonName": "불꽃의 성채",
+      "dungeonId": "d2",
+      "bossIndex": 2,
+      "bossName": "용암의 지배자",
+      "dps": 82100,
+      "clearTime": 428,
+      "critRate": 69.8,
+      "damagePercent": 31.5,
+      "partyDps": 260600,
+      "combatPower": 142800
+    },
+    {
+      "reportId": "cD5nQr2s",
+      "date": "2025-03-15",
+      "dungeonName": "심연의 탑",
+      "dungeonId": "d1",
+      "bossIndex": 2,
+      "bossName": "심연의 군주",
+      "dps": 79300,
+      "clearTime": 341,
+      "critRate": 66.4,
+      "damagePercent": 30.8,
+      "partyDps": 257500,
+      "combatPower": 141200
+    },
+    {
+      "reportId": "eF7pSt4u",
+      "date": "2025-03-12",
+      "dungeonName": "서리바람 요새",
+      "dungeonId": "d3",
+      "bossIndex": 2,
+      "bossName": "빙하의 군주",
+      "dps": 74500,
+      "clearTime": 551,
+      "critRate": 64.2,
+      "damagePercent": 29.1,
+      "partyDps": 256000,
+      "combatPower": 140500
+    },
+    {
+      "reportId": "gH9rUv6w",
+      "date": "2025-03-10",
+      "dungeonName": "심연의 탑",
+      "dungeonId": "d1",
+      "bossIndex": 1,
+      "bossName": "어둠의 수호자",
+      "dps": 71200,
+      "clearTime": 288,
+      "critRate": 68.9,
+      "damagePercent": 28.4,
+      "partyDps": 250700,
+      "combatPower": 140500
+    },
+    {
+      "reportId": "iJ1sWx8y",
+      "date": "2025-03-07",
+      "dungeonName": "불꽃의 성채",
+      "dungeonId": "d2",
+      "bossIndex": 1,
+      "bossName": "화염 골렘",
+      "dps": 68400,
+      "clearTime": 375,
+      "critRate": 65.3,
+      "damagePercent": 27.8,
+      "partyDps": 246000,
+      "combatPower": 139800
+    },
+    {
+      "reportId": "kL3tYz0a",
+      "date": "2025-03-04",
+      "dungeonName": "심연의 탑",
+      "dungeonId": "d1",
+      "bossIndex": 3,
+      "bossName": "공허의 신",
+      "dps": 79100,
+      "clearTime": 512,
+      "critRate": 70.2,
+      "damagePercent": 30.5,
+      "partyDps": 259300,
+      "combatPower": 141900
+    },
+    {
+      "reportId": "mN5uAb2c",
+      "date": "2025-02-28",
+      "dungeonName": "서리바람 요새",
+      "dungeonId": "d3",
+      "bossIndex": 1,
+      "bossName": "서리 골렘",
+      "dps": 58900,
+      "clearTime": 488,
+      "critRate": 61.7,
+      "damagePercent": 25.3,
+      "partyDps": 232700,
+      "combatPower": 139200
+    }
+  ]
+}

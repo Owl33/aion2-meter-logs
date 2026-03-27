@@ -1,59 +1,62 @@
-/**
- * components/shared/AppTabs.tsx
- * 사이트 전체에서 공유하는 하단 보더 스타일 탭
- * RankingsPage, ReportPage 동일한 TabsTrigger className을 추상화
- */
+"use client"
 
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
+import { useEffect, useRef, useState } from "react"
 
-// ─── AppTabsTrigger ──────────────────────────────────────────
-interface AppTabsTriggerProps {
-  value: string
-  children: React.ReactNode
-  className?: string
+interface TabItem<T> {
+  value: T
+  label: string
 }
 
-export function AppTabsTrigger({
-  value,
-  children,
-  className,
-}: AppTabsTriggerProps) {
+interface TabBarProps<T> {
+  tabs: TabItem<T>[]
+  active: T
+  onChange: (value: T) => void
+}
+
+export default function AppTabs<T>({ tabs, active, onChange }: TabBarProps<T>) {
+  const activeIndex = tabs.findIndex((t) => t.value === active)
+
+  const [rect, setRect] = useState({ left: 0, width: 0 })
+  const refs = useRef<(HTMLButtonElement | null)[]>([])
+
+  useEffect(() => {
+    const el = refs.current[activeIndex]
+    if (el) {
+      setRect({
+        left: el.offsetLeft,
+        width: el.offsetWidth,
+      })
+    }
+  }, [activeIndex])
+
   return (
-    <TabsTrigger
-      value={value}
-      className={cn(
-        "rounded-none border-b-2 border-transparent px-4 py-2.5 text-sm font-medium",
-        "bg-transparent shadow-none",
-        "data-[state=active]:border-primary data-[state=active]:text-primary",
-        "data-[state=active]:bg-transparent data-[state=active]:shadow-none",
-        className
-      )}
-    >
-      {children}
-    </TabsTrigger>
+    <div className="relative flex w-fit rounded-lg bg-muted/50 py-1.5">
+      <div
+        className="absolute top-1 h-[calc(100%-8px)] rounded-lg bg-background shadow-sm transition-[transform,width] duration-300 ease-out"
+        style={{
+          transform: `translateX(${rect.left}px)`,
+          width: rect.width,
+        }}
+      />
+
+      {tabs.map((tab, index) => (
+        <button
+          key={String(tab.value)}
+          ref={(el) => {
+            refs.current[index] = el
+          }}
+          onClick={() => onChange(tab.value)}
+          className={cn(
+            "relative z-10 px-4 py-1.5 text-sm transition-colors duration-200",
+            active === tab.value
+              ? "text-foreground"
+              : "text-muted-foreground hover:text-foreground"
+          )}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
   )
 }
-
-// ─── AppTabsList ─────────────────────────────────────────────
-interface AppTabsListProps {
-  children: React.ReactNode
-  className?: string
-}
-
-export function AppTabsList({ children, className }: AppTabsListProps) {
-  return (
-    <TabsList
-      className={cn(
-        "h-auto border-b border-border/50 bg-transparent p-0",
-        "w-full justify-start gap-0 rounded-none",
-        className
-      )}
-    >
-      {children}
-    </TabsList>
-  )
-}
-
-// ─── AppTabs (re-export for convenience) ────────────────────
-export { Tabs as AppTabs, TabsContent as AppTabsContent }

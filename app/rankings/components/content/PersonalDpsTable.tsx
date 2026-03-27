@@ -1,60 +1,67 @@
-"use client"
+"use client";
 
 // app/rankings/components/content/PersonalDpsTable.tsx
-import { useMemo } from "react"
-import { type ColumnDef } from "@tanstack/react-table"
-import { cn } from "@/lib/utils"
-import { fmtDps, fmtTimeMmSs, fmtNumber } from "@/lib/formatters"
-import JobBadge from "@/components/shared/JobBadge"
-import DpsBar from "@/components/shared/DpsBar"
-import RankBadge from "@/components/shared/RankBadge"
-import { DataTable, DataTableToolbar } from "@/components/table"
-import type { PersonalEntry } from "../../types"
-import { useRouter } from "next/navigation"
+// 변경점: characterName 셀을 Link로 감싸서 /user/[name]으로 이동
+//          행 클릭(report 이동)과 이름 클릭(user 이동)을 분리
+
+import { useMemo } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { type ColumnDef } from "@tanstack/react-table";
+import { fmtDps, fmtTimeMmSs, fmtNumber } from "@/lib/formatters";
+import JobBadge from "@/components/shared/JobBadge";
+import DpsBar from "@/components/shared/DpsBar";
+import RankBadge from "@/components/shared/RankBadge";
+import { DataTable, DataTableToolbar } from "@/components/table";
+import type { PersonalEntry } from "../../types";
 
 interface PersonalDpsTableProps {
-  entries: PersonalEntry[]
+  entries: PersonalEntry[];
 }
 
 export default function PersonalDpsTable({ entries }: PersonalDpsTableProps) {
-  const router = useRouter()
+  const router = useRouter();
+
   const maxDps = useMemo(
     () => (entries.length ? Math.max(...entries.map((e) => e.dps)) : 1),
     [entries]
-  )
+  );
 
   const allJobs = useMemo(() => {
-    const jobs = new Set(entries.map((e) => e.jobName))
-    return ["전체", ...Array.from(jobs)]
-  }, [entries])
+    const jobs = new Set(entries.map((e) => e.jobName));
+    return ["전체", ...Array.from(jobs)];
+  }, [entries]);
 
   const columns: ColumnDef<PersonalEntry>[] = useMemo(
     () => [
       {
         id: "rank",
         size: 48,
-        // 정렬/필터 후 row.index 기준으로 rank 표시
-        cell: ({ row }) => (
-          <div className="">
-            <RankBadge rank={row.index + 1} />
-          </div>
-        ),
-        header: () => <span className="">#</span>,
+        cell: ({ row }) => <RankBadge rank={row.index + 1} />,
+        header: () => <span>#</span>,
         enableSorting: false,
       },
       {
         accessorKey: "characterName",
-        header: () => <span className="">캐릭터</span>,
-        cell: ({ getValue }) => (
-          <div className="h-full transition-all duration-250 hover:scale-105 hover:text-primary">
-            {getValue<string>()}
-          </div>
-        ),
+        header: () => <span>캐릭터</span>,
+        cell: ({ getValue }) => {
+          const name = getValue<string>();
+          return (
+            // stopPropagation: 행 클릭(report 이동) 이벤트와 분리
+            <Link
+              href={`/user/${encodeURIComponent(name)}`}
+              onClick={(e) => e.stopPropagation()}
+              className="font-medium hover:text-primary hover:underline underline-offset-2 transition-colors"
+            >
+              {name}
+            </Link>
+          );
+        },
         enableSorting: false,
       },
       {
         accessorKey: "jobName",
-        header: () => <span className="">직업</span>,
+        header: () => <span>직업</span>,
         cell: ({ getValue }) => <JobBadge job={getValue<string>()} />,
         filterFn: (row, _, filterValue) =>
           filterValue === "전체" || row.original.jobName === filterValue,
@@ -63,51 +70,39 @@ export default function PersonalDpsTable({ entries }: PersonalDpsTableProps) {
       {
         accessorKey: "dps",
         sortDescFirst: true,
-        meta: {
-          sortable: true,
-        },
-        header: ({ column }) => <div className="">Best DPS</div>,
-        cell: ({ getValue, column }) => (
-          <span>{fmtDps(getValue<number>())}</span>
+        meta: { sortable: true },
+        header: () => <span>Best DPS</span>,
+        cell: ({ getValue }) => (
+          <span className="font-semibold text-primary tabular-nums">
+            {fmtDps(getValue<number>())}
+          </span>
         ),
       },
       {
         accessorKey: "clearTime",
-        meta: {
-          sortable: true,
-        },
-        sortDescFirst: false, // 클리어는 오름차순이 좋은 값
-        header: ({ column }) => <div className="">클리어</div>,
-        cell: ({ getValue, column }) => (
-          <span>{fmtTimeMmSs(getValue<number>())}</span>
+        meta: { sortable: true },
+        sortDescFirst: false,
+        header: () => <span>클리어</span>,
+        cell: ({ getValue }) => (
+          <span className="tabular-nums">{fmtTimeMmSs(getValue<number>())}</span>
         ),
       },
       {
         accessorKey: "critRate",
         sortDescFirst: true,
-        meta: {
-          sortable: true,
-        },
-        header: ({ column }) => <div>치명타</div>,
-        cell: ({ getValue, column }) => {
-          const v = getValue<number>()
-          return <span>{v.toFixed(1)}%</span>
-        },
+        meta: { sortable: true },
+        header: () => <span>치명타</span>,
+        cell: ({ getValue }) => (
+          <span className="tabular-nums">{getValue<number>().toFixed(1)}%</span>
+        ),
       },
       {
         accessorKey: "combatPower",
         sortDescFirst: true,
-        meta: {
-          sortable: true,
-        },
-        header: ({ column }) => (
-          <div>
-            전투력
-            {/* <DataTableColumnHeader column={column} title="전투력" /> */}
-          </div>
-        ),
-        cell: ({ getValue, column }) => (
-          <span>{fmtNumber(getValue<number>())}</span>
+        meta: { sortable: true },
+        header: () => <span>전투력</span>,
+        cell: ({ getValue }) => (
+          <span className="tabular-nums">{fmtNumber(getValue<number>())}</span>
         ),
       },
       {
@@ -121,30 +116,28 @@ export default function PersonalDpsTable({ entries }: PersonalDpsTableProps) {
         ),
         enableSorting: false,
       },
-
       {
         accessorKey: "date",
-        header: () => <span className="">날짜</span>,
-        cell: ({ getValue }) => <span>{getValue<string>()}</span>,
+        header: () => <span>날짜</span>,
+        cell: ({ getValue }) => (
+          <span className="text-muted-foreground">{getValue<string>()}</span>
+        ),
         enableSorting: false,
       },
     ],
     [maxDps]
-  )
-  const onClickRow = (row: PersonalEntry) => {
-    console.log(row)
-    router.push(`reports/${row.reportId}`)
-  }
+  );
+
   return (
     <DataTable
       columns={columns}
       data={entries}
       emptyMessage="기록이 없습니다."
-      // toolbar prop 대신 JobFilterToolbar를 DataTable 내부에서 직접 사용
       toolbar={(table) => (
         <DataTableToolbar table={table} columnId="jobName" jobs={allJobs} />
       )}
-      onClickRow={(row) => onClickRow(row)}
+      // 행 클릭 → report 페이지 이동 (이름 클릭은 별도 Link로 분리됨)
+      onClickRow={(row) => router.push(`/reports/${row.reportId}`)}
     />
-  )
+  );
 }

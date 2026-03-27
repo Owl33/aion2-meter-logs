@@ -231,7 +231,7 @@ export default function CharacterSearchModal({
 
   const navigate = useCallback(
     (character: CharacterResult) => {
-      window.location.href = `/characters/${encodeURIComponent(character.name)}`
+      window.location.href = `/user/${encodeURIComponent(character.name)}`
       onClose()
     },
     [onClose]
