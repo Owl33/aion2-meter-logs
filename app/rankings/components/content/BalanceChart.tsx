@@ -1,37 +1,13 @@
 "use client";
 
-/**
- * components/rankings/BalanceChart.tsx
- */
+// app/rankings/components/content/BalanceChart.tsx
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import FilterChip from "@/components/shared/FilterChip";
 import BoxPlotChart, { type BoxPlotItem } from "@/components/charts/BoxPlotChart";
+import type { Boss, BossStats, Period } from "../../types";
 
-// ─── 타입 ────────────────────────────────────────────────────
-interface StatEntry {
-  jobName: string;
-  min: number;
-  avg: number;
-  max: number;
-  q1?: number;
-  q3?: number;
-  outliers?: number[];
-}
-
-interface BossStats {
-  dateRange: { from: string; to: string };
-  data: StatEntry[];
-}
-
-interface BalanceChartProps {
-  statsByBoss: Record<string, BossStats>;
-  bosses: { index: number; name: string }[];
-  fixedBossIndex?: number;
-}
-
-// ─── 직업 색상 ───────────────────────────────────────────────
 const JOB_COLORS: Record<string, string> = {
   검사:   "#E84D4D",
   정령사: "#5B9BD5",
@@ -41,25 +17,34 @@ const JOB_COLORS: Record<string, string> = {
   격투가: "#F97316",
 };
 
-const PERIOD_OPTIONS = [
+const PERIOD_OPTIONS: { label: string; value: Period }[] = [
   { label: "1개월", value: "month" },
   { label: "전체",  value: "all"   },
-] as const;
-type Period = "month" | "all";
+];
+
+interface BalanceChartProps {
+  statsByBoss: Record<string, BossStats>;
+  bosses: Boss[];
+  fixedBossIndex?: number;
+}
 
 export default function BalanceChart({
   statsByBoss,
   bosses,
   fixedBossIndex,
 }: BalanceChartProps) {
+  // fixedBossIndex prop이 바뀌면 내부 state도 동기화 (버그 수정)
   const [bossFilter, setBossFilter] = useState<string>(
-    fixedBossIndex ? String(fixedBossIndex) : "all"
+    fixedBossIndex != null ? String(fixedBossIndex) : "all"
   );
   const [period, setPeriod] = useState<Period>("month");
 
+  useEffect(() => {
+    setBossFilter(fixedBossIndex != null ? String(fixedBossIndex) : "all");
+  }, [fixedBossIndex]);
+
   const currentStats = statsByBoss[bossFilter];
 
-  // StatEntry[] → BoxPlotItem[] 변환
   const chartItems = useMemo<BoxPlotItem[]>(() => {
     if (!currentStats?.data.length) return [];
     return currentStats.data.map((d) => ({
@@ -76,21 +61,20 @@ export default function BalanceChart({
 
   const bossFilterOptions = useMemo(() => {
     const opts: { label: string; value: string }[] = [];
-    if (!fixedBossIndex) opts.push({ label: "전체", value: "all" });
+    if (fixedBossIndex == null) opts.push({ label: "전체", value: "all" });
     bosses.forEach((b) =>
       opts.push({ label: `${b.index}네임드`, value: String(b.index) })
     );
     return opts;
   }, [bosses, fixedBossIndex]);
 
-  // 직업 수에 따라 차트 높이 동적 조정
   const chartHeight = Math.max(240, chartItems.length * 64 + 60);
 
   return (
     <div className="flex flex-col gap-3">
       {/* 필터 행 */}
       <div className="flex items-center justify-between gap-3 flex-wrap">
-        {!fixedBossIndex && (
+        {fixedBossIndex == null && (
           <div className="flex items-center gap-1.5 flex-wrap">
             <span className="text-[11px] text-muted-foreground mr-1">네임드</span>
             {bossFilterOptions.map((opt) => (

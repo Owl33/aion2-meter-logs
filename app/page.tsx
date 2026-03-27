@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import homeData from "@/data/home.json";
-import HomePage from "@/components/home/HomePage";
+import Client from "./client";
 
 export const metadata: Metadata = {
   title: "AionLogs — 아이온2 레이드 로그 분석",
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <HomePage data={homeData} />;
+  return <Client data={homeData} />;
 }

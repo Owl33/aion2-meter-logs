@@ -5,54 +5,56 @@
  * 각 컬럼 안에 Top 10 리스트
  */
 
-import { Card } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import { fmtDps } from "@/lib/formatters";
-import JobBadge from "@/components/shared/JobBadge";
+import { Card } from "@/components/ui/card"
+import { cn } from "@/lib/utils"
+import { fmtDps } from "@/lib/formatters"
+import JobBadge from "@/components/shared/JobBadge"
 
 interface RankEntry {
-  rank: number;
-  characterName: string;
-  jobName: string;
-  dps: number;
-  reportId: string;
+  rank: number
+  characterName: string
+  jobName: string
+  dps: number
+  reportId: string
 }
 
 interface Boss {
-  index: number;
-  name: string;
-  top10: RankEntry[];
+  index: number
+  name: string
+  top10: RankEntry[]
 }
 
 interface DungeonRankingCardProps {
-  dungeonId: string;
-  dungeonName: string;
-  bosses: Boss[];
+  dungeonId: string
+  dungeonName: string
+  bosses: Boss[]
 }
 
 const RANK_BADGE: Record<number, string> = {
   1: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400",
   2: "bg-zinc-100 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400",
   3: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400",
-};
+}
 
 // ─── 네임드 단일 컬럼 ────────────────────────────────────────
 function BossColumn({ dungeonId, boss }: { dungeonId: string; boss: Boss }) {
-  const maxDps = boss.top10[0]?.dps ?? 1;
+  const maxDps = boss.top10[0]?.dps ?? 1
 
   return (
-    <div className="flex flex-col min-w-0">
+    <div className="flex min-w-0 flex-col">
       {/* 네임드 헤더 */}
-      <div className="flex items-center justify-between px-3 py-2.5 border-b border-border/50 bg-muted/20">
-        <div className="flex items-center gap-1.5 min-w-0">
-          <span className="text-[11px] font-semibold text-[#7C6FE0] shrink-0">
+      <div className="flex items-center justify-between border-b border-border/50 bg-muted/20 px-3 py-2.5">
+        <div className="flex min-w-0 items-center gap-1.5">
+          <span className="shrink-0 text-[11px] font-semibold text-primary">
             {boss.index}네임드
           </span>
-          <span className="text-[11px] text-muted-foreground truncate">{boss.name}</span>
+          <span className="truncate text-[11px] text-muted-foreground">
+            {boss.name}
+          </span>
         </div>
         <a
           href={`/rankings?dungeon=${dungeonId}&boss=${boss.index}`}
-          className="text-[10px] text-muted-foreground hover:text-[#7C6FE0] hover:underline shrink-0 ml-1"
+          className="ml-1 shrink-0 text-[10px] text-muted-foreground hover:text-primary hover:underline"
         >
           더보기
         </a>
@@ -64,33 +66,36 @@ function BossColumn({ dungeonId, boss }: { dungeonId: string; boss: Boss }) {
           <a
             key={entry.reportId}
             href={`/reports/${entry.reportId}`}
-            className="flex items-center gap-2 px-3 py-2 hover:bg-muted/30 transition-colors duration-150"
+            className="flex items-center gap-2 px-3 py-2 transition-colors duration-150 hover:bg-muted/30"
           >
             {/* 순위 */}
             <span
               className={cn(
-                "inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-bold shrink-0",
-                RANK_BADGE[entry.rank] ?? "text-muted-foreground text-[11px] font-medium"
+                "inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-bold",
+                RANK_BADGE[entry.rank] ??
+                  "text-[11px] font-medium text-muted-foreground"
               )}
             >
               {entry.rank}
             </span>
 
             {/* 캐릭터 + 직업 */}
-            <div className="flex items-center gap-1.5 flex-1 min-w-0">
-              <span className="text-xs font-semibold truncate">{entry.characterName}</span>
+            <div className="flex min-w-0 flex-1 items-center gap-1.5">
+              <span className="truncate text-xs font-semibold">
+                {entry.characterName}
+              </span>
               <JobBadge job={entry.jobName} />
             </div>
 
             {/* DPS */}
-            <span className="text-xs font-bold tabular-nums shrink-0 text-right">
+            <span className="shrink-0 text-right text-xs font-bold tabular-nums">
               {fmtDps(entry.dps)}
             </span>
           </a>
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 // ─── 던전 카드 (3컬럼) ───────────────────────────────────────
@@ -100,13 +105,13 @@ export default function DungeonRankingCard({
   bosses,
 }: DungeonRankingCardProps) {
   return (
-    <Card className="border-border/50 shadow-none overflow-hidden">
+    <Card className="overflow-hidden border-border/50 shadow-none">
       {/* 던전 헤더 */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-border/60 bg-muted/10">
+      <div className="flex items-center justify-between border-b border-border/60 bg-muted/10 px-4 py-3">
         <h3 className="text-sm font-bold">{dungeonName}</h3>
         <a
           href={`/rankings?dungeon=${dungeonId}`}
-          className="text-xs text-[#7C6FE0] hover:underline"
+          className="text-xs text-primary hover:underline"
         >
           전체 랭킹
         </a>
@@ -119,5 +124,5 @@ export default function DungeonRankingCard({
         ))}
       </div>
     </Card>
-  );
+  )
 }

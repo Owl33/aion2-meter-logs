@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import reportData from "@/data/kPx2Qm9r.json";
-import ReportPage from "@/components/report/ReportPage";
+import ReportClient from "./client";
 
 /**
  * app/reports/[id]/page.tsx
@@ -28,6 +28,6 @@ export async function generateMetadata({
   };
 }
 
-export default function Page({ params }: { params: { id: string } }) {
-  return <ReportPage reportData={reportData} />;
+export default function ReportsPage({ params }: { params: { id: string } }) {
+  return <ReportClient reportData={reportData} />;
 }

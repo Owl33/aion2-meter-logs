@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * components/home/HomePage.tsx
+ * app/client.tsx
  */
 
 import { useState } from "react";
