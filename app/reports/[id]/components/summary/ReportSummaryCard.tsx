@@ -19,13 +19,12 @@ interface ReportSummaryCardProps {
 
 export default function ReportSummaryCard({ report }: ReportSummaryCardProps) {
   const partyDps = Math.round(report.totalPartyDamage / report.elapsedSeconds)
-
   const stats: SummaryStat[] = [
     { label: "클리어 시간", value: fmtSeconds(report.elapsedSeconds) },
     { label: "총 피해량", value: fmtDmg(report.totalPartyDamage) },
     { label: "파티 DPS", value: fmtDps(partyDps) },
     { label: "참여 인원", value: `${report.players.length}명` },
-    { label: "리포트 ID", value: `#${report.id.slice(0, 8)}`, mono: true },
+    { label: "리포트 ID", value: `#${report?.id?.slice(0, 8)}`, mono: true },
   ]
 
   return (

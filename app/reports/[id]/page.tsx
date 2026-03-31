@@ -1,6 +1,12 @@
-import type { Metadata } from "next";
-import reportData from "@/data/kPx2Qm9r.json";
-import ReportClient from "./client";
+import type { Metadata } from "next"
+import rawReport from "@/data/newReport.json"
+import skillsCatalog from "@/data/skills.json"
+import ReportClient from "./client"
+import {
+  buildReportDataFromRaw,
+  type RawReport,
+  type SkillCatalogEntry,
+} from "@/lib/reportFromPackets"
 
 /**
  * app/reports/[id]/page.tsx
@@ -12,11 +18,14 @@ import ReportClient from "./client";
 export async function generateMetadata({
   params,
 }: {
-  params: { id: string };
+  params: { id: string }
 }): Promise<Metadata> {
-  // mock 단계: 고정 데이터 사용
-  const report = reportData;
-  const topPlayer = report.players[0];
+  const report = buildReportDataFromRaw({
+    raw: rawReport as RawReport,
+    reportId: params.id,
+    skillsCatalog: skillsCatalog as SkillCatalogEntry[],
+  })
+  const topPlayer = report.players[0]
 
   return {
     title: `${report.targetName} — ${report.dungeon}`,
@@ -25,9 +34,14 @@ export async function generateMetadata({
       title: `${report.targetName} 클리어 리포트 | AionLogs`,
       description: `파티 DPS: ${Math.round(report.totalPartyDamage / report.elapsedSeconds).toLocaleString()} · 참여 ${report.players.length}명`,
     },
-  };
+  }
 }
 
 export default function ReportsPage({ params }: { params: { id: string } }) {
-  return <ReportClient reportData={reportData} />;
+  const reportData = buildReportDataFromRaw({
+    raw: rawReport as RawReport,
+    reportId: params.id,
+    skillsCatalog: skillsCatalog as SkillCatalogEntry[],
+  })
+  return <ReportClient reportData={reportData} />
 }

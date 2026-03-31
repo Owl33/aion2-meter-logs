@@ -202,7 +202,7 @@
           "name": "강화의 은혜",
           "icon": "/icons/skills/so_skill_passive_007.png",
           "dps": 12100,
-          "percent": 5.40,
+          "percent": 5.4,
           "hitCount": 95,
           "critCount": 72,
           "avgDamage": 15800,
@@ -277,7 +277,7 @@
           "name": "독 화살",
           "icon": "/icons/skills/ar_skill_passive_002.png",
           "dps": 9800,
-          "percent": 9.90,
+          "percent": 9.9,
           "hitCount": 200,
           "critCount": 0,
           "avgDamage": 6500,
@@ -338,7 +338,7 @@
           "name": "성스러운 파동",
           "icon": "/icons/skills/cl_skill_passive_004.png",
           "dps": 18200,
-          "percent": 21.20,
+          "percent": 21.2,
           "hitCount": 132,
           "critCount": 80,
           "avgDamage": 20800,
@@ -366,21 +366,147 @@
     }
   ],
   "timeline": [
-    { "t": 1, "players": [{ "entityId": 8353, "dps": 134327, "damage": 160000 }, { "entityId": 15776, "dps": 176834, "damage": 210631 }] },
-    { "t": 2, "players": [{ "entityId": 15182, "dps": 30977, "damage": 67086 }, { "entityId": 8353, "dps": 73880, "damage": 160000 }, { "entityId": 1028, "dps": 27800, "damage": 60206 }, { "entityId": 15776, "dps": 167635, "damage": 363040 }] },
-    { "t": 5, "players": [{ "entityId": 15182, "dps": 69405, "damage": 360449 }, { "entityId": 8353, "dps": 210588, "damage": 1093671 }, { "entityId": 1028, "dps": 63776, "damage": 331217 }, { "entityId": 15776, "dps": 185999, "damage": 965969 }] },
-    { "t": 10, "players": [{ "entityId": 15182, "dps": 118320, "damage": 1203499 }, { "entityId": 8353, "dps": 329483, "damage": 3351334 }, { "entityId": 1028, "dps": 86357, "damage": 878384 }, { "entityId": 15776, "dps": 267620, "damage": 2722101 }] },
-    { "t": 20, "players": [{ "entityId": 15182, "dps": 95905, "damage": 1919692 }, { "entityId": 8353, "dps": 385319, "damage": 7712745 }, { "entityId": 1028, "dps": 70786, "damage": 1416899 }, { "entityId": 15776, "dps": 253114, "damage": 5066464 }] },
-    { "t": 30, "players": [{ "entityId": 15182, "dps": 108200, "damage": 3246000 }, { "entityId": 8353, "dps": 368400, "damage": 11052000 }, { "entityId": 1028, "dps": 82100, "damage": 2463000 }, { "entityId": 15776, "dps": 278300, "damage": 8349000 }] },
-    { "t": 40, "players": [{ "entityId": 15182, "dps": 102400, "damage": 4096000 }, { "entityId": 8353, "dps": 352200, "damage": 14088000 }, { "entityId": 1028, "dps": 79800, "damage": 3192000 }, { "entityId": 15776, "dps": 265100, "damage": 10604000 }] },
-    { "t": 50, "players": [{ "entityId": 15182, "dps": 105600, "damage": 5280000 }, { "entityId": 8353, "dps": 358800, "damage": 17940000 }, { "entityId": 1028, "dps": 81200, "damage": 4060000 }, { "entityId": 15776, "dps": 270400, "damage": 13520000 }] },
-    { "t": 60, "players": [{ "entityId": 15182, "dps": 99800, "damage": 5988000 }, { "entityId": 8353, "dps": 344200, "damage": 20652000 }, { "entityId": 1028, "dps": 84600, "damage": 5076000 }, { "entityId": 15776, "dps": 259800, "damage": 15588000 }] },
-    { "t": 70, "players": [{ "entityId": 15182, "dps": 97200, "damage": 6804000 }, { "entityId": 8353, "dps": 338600, "damage": 23702000 }, { "entityId": 1028, "dps": 86200, "damage": 6034000 }, { "entityId": 15776, "dps": 254200, "damage": 17794000 }] },
-    { "t": 80, "players": [{ "entityId": 15182, "dps": 96400, "damage": 7712000 }, { "entityId": 8353, "dps": 295800, "damage": 23664000 }, { "entityId": 1028, "dps": 87400, "damage": 6992000 }, { "entityId": 15776, "dps": 248800, "damage": 19904000 }] },
-    { "t": 90, "players": [{ "entityId": 15182, "dps": 97800, "damage": 8802000 }, { "entityId": 8353, "dps": 301200, "damage": 27108000 }, { "entityId": 1028, "dps": 86800, "damage": 7812000 }, { "entityId": 15776, "dps": 243200, "damage": 21888000 }] },
-    { "t": 100, "players": [{ "entityId": 15182, "dps": 98200, "damage": 9820000 }, { "entityId": 8353, "dps": 308400, "damage": 30840000 }, { "entityId": 1028, "dps": 85600, "damage": 8560000 }, { "entityId": 15776, "dps": 238600, "damage": 23860000 }] },
-    { "t": 110, "players": [{ "entityId": 15182, "dps": 99100, "damage": 10901000 }, { "entityId": 8353, "dps": 314600, "damage": 34606000 }, { "entityId": 1028, "dps": 85200, "damage": 9372000 }, { "entityId": 15776, "dps": 233800, "damage": 25718000 }] },
-    { "t": 120, "players": [{ "entityId": 15182, "dps": 98800, "damage": 11856000 }, { "entityId": 8353, "dps": 320200, "damage": 38424000 }, { "entityId": 1028, "dps": 84800, "damage": 10176000 }, { "entityId": 15776, "dps": 229200, "damage": 27504000 }] },
-    { "t": 132, "players": [{ "entityId": 15182, "dps": 98998, "damage": 10935824 }, { "entityId": 8353, "dps": 285708, "damage": 37776502 }, { "entityId": 1028, "dps": 85850, "damage": 9772542 }, { "entityId": 15776, "dps": 224009, "damage": 26686127 }] }
+    {
+      "t": 1,
+      "players": [
+        { "entityId": 8353, "dps": 134327, "damage": 160000 },
+        { "entityId": 15776, "dps": 176834, "damage": 210631 }
+      ]
+    },
+    {
+      "t": 2,
+      "players": [
+        { "entityId": 15182, "dps": 30977, "damage": 67086 },
+        { "entityId": 8353, "dps": 73880, "damage": 160000 },
+        { "entityId": 1028, "dps": 27800, "damage": 60206 },
+        { "entityId": 15776, "dps": 167635, "damage": 363040 }
+      ]
+    },
+    {
+      "t": 5,
+      "players": [
+        { "entityId": 15182, "dps": 69405, "damage": 360449 },
+        { "entityId": 8353, "dps": 210588, "damage": 1093671 },
+        { "entityId": 1028, "dps": 63776, "damage": 331217 },
+        { "entityId": 15776, "dps": 185999, "damage": 965969 }
+      ]
+    },
+    {
+      "t": 10,
+      "players": [
+        { "entityId": 15182, "dps": 118320, "damage": 1203499 },
+        { "entityId": 8353, "dps": 329483, "damage": 3351334 },
+        { "entityId": 1028, "dps": 86357, "damage": 878384 },
+        { "entityId": 15776, "dps": 267620, "damage": 2722101 }
+      ]
+    },
+    {
+      "t": 20,
+      "players": [
+        { "entityId": 15182, "dps": 95905, "damage": 1919692 },
+        { "entityId": 8353, "dps": 385319, "damage": 7712745 },
+        { "entityId": 1028, "dps": 70786, "damage": 1416899 },
+        { "entityId": 15776, "dps": 253114, "damage": 5066464 }
+      ]
+    },
+    {
+      "t": 30,
+      "players": [
+        { "entityId": 15182, "dps": 108200, "damage": 3246000 },
+        { "entityId": 8353, "dps": 368400, "damage": 11052000 },
+        { "entityId": 1028, "dps": 82100, "damage": 2463000 },
+        { "entityId": 15776, "dps": 278300, "damage": 8349000 }
+      ]
+    },
+    {
+      "t": 40,
+      "players": [
+        { "entityId": 15182, "dps": 102400, "damage": 4096000 },
+        { "entityId": 8353, "dps": 352200, "damage": 14088000 },
+        { "entityId": 1028, "dps": 79800, "damage": 3192000 },
+        { "entityId": 15776, "dps": 265100, "damage": 10604000 }
+      ]
+    },
+    {
+      "t": 50,
+      "players": [
+        { "entityId": 15182, "dps": 105600, "damage": 5280000 },
+        { "entityId": 8353, "dps": 358800, "damage": 17940000 },
+        { "entityId": 1028, "dps": 81200, "damage": 4060000 },
+        { "entityId": 15776, "dps": 270400, "damage": 13520000 }
+      ]
+    },
+    {
+      "t": 60,
+      "players": [
+        { "entityId": 15182, "dps": 99800, "damage": 5988000 },
+        { "entityId": 8353, "dps": 344200, "damage": 20652000 },
+        { "entityId": 1028, "dps": 84600, "damage": 5076000 },
+        { "entityId": 15776, "dps": 259800, "damage": 15588000 }
+      ]
+    },
+    {
+      "t": 70,
+      "players": [
+        { "entityId": 15182, "dps": 97200, "damage": 6804000 },
+        { "entityId": 8353, "dps": 338600, "damage": 23702000 },
+        { "entityId": 1028, "dps": 86200, "damage": 6034000 },
+        { "entityId": 15776, "dps": 254200, "damage": 17794000 }
+      ]
+    },
+    {
+      "t": 80,
+      "players": [
+        { "entityId": 15182, "dps": 96400, "damage": 7712000 },
+        { "entityId": 8353, "dps": 295800, "damage": 23664000 },
+        { "entityId": 1028, "dps": 87400, "damage": 6992000 },
+        { "entityId": 15776, "dps": 248800, "damage": 19904000 }
+      ]
+    },
+    {
+      "t": 90,
+      "players": [
+        { "entityId": 15182, "dps": 97800, "damage": 8802000 },
+        { "entityId": 8353, "dps": 301200, "damage": 27108000 },
+        { "entityId": 1028, "dps": 86800, "damage": 7812000 },
+        { "entityId": 15776, "dps": 243200, "damage": 21888000 }
+      ]
+    },
+    {
+      "t": 100,
+      "players": [
+        { "entityId": 15182, "dps": 98200, "damage": 9820000 },
+        { "entityId": 8353, "dps": 308400, "damage": 30840000 },
+        { "entityId": 1028, "dps": 85600, "damage": 8560000 },
+        { "entityId": 15776, "dps": 238600, "damage": 23860000 }
+      ]
+    },
+    {
+      "t": 110,
+      "players": [
+        { "entityId": 15182, "dps": 99100, "damage": 10901000 },
+        { "entityId": 8353, "dps": 314600, "damage": 34606000 },
+        { "entityId": 1028, "dps": 85200, "damage": 9372000 },
+        { "entityId": 15776, "dps": 233800, "damage": 25718000 }
+      ]
+    },
+    {
+      "t": 120,
+      "players": [
+        { "entityId": 15182, "dps": 98800, "damage": 11856000 },
+        { "entityId": 8353, "dps": 320200, "damage": 38424000 },
+        { "entityId": 1028, "dps": 84800, "damage": 10176000 },
+        { "entityId": 15776, "dps": 229200, "damage": 27504000 }
+      ]
+    },
+    {
+      "t": 132,
+      "players": [
+        { "entityId": 15182, "dps": 98998, "damage": 10935824 },
+        { "entityId": 8353, "dps": 285708, "damage": 37776502 },
+        { "entityId": 1028, "dps": 85850, "damage": 9772542 },
+        { "entityId": 15776, "dps": 224009, "damage": 26686127 }
+      ]
+    }
   ]
 }

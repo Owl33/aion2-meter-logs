@@ -21,7 +21,6 @@ interface ReportClientProps {
 export default function ReportClient({ reportData }: ReportClientProps) {
   const [selectedPlayer, setSelectedPlayer] = useState<number | null>(null)
   const [tab, setTab] = useState<ReportTab>("overview")
-
   const colorMap = useMemo(
     () => buildColorMap(reportData.players.map((p) => p.entityId)),
     [reportData.players]
@@ -44,11 +43,8 @@ export default function ReportClient({ reportData }: ReportClientProps) {
   return (
     <div className="mx-auto flex max-w-[1100px] flex-col gap-5 px-5 py-6 pb-16">
       <ReportSummaryCard report={reportData} />
-
-      {/* ✅ 새로운 Tabs */}
       <AppTabs tabs={tabs} active={tab} onChange={(value) => setTab(value)} />
 
-      {/* ✅ Content */}
       <TransitionContent key={tab}>
         {tab === "overview" && (
           <OverviewTab
